@@ -75,30 +75,30 @@
                         {{-- <label>Navigation</label> --}}
                     </li>
                     <li class="nav-item">
-                        <a href="{{route('layout.page')}}" class="nav-link "><span class="pcoded-micon"><i
+                        <a href="" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
                     </li>
                     
                     
                     <li class="nav-item">
-                        <a href="" class="nav-link "><span class="pcoded-micon"><i
+                        <a href="{{route('aminities.page')}}" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-home"></i></span><span class="pcoded-mtext">Omenities</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link "><span class="pcoded-micon"><i
+                        <a href="{{route('categaries.page')}}" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-home"></i></span><span class="pcoded-mtext">Categories</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link "><span class="pcoded-micon"><i
+                        <a href="{{route('nearby.page')}}" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-home"></i></span><span class="pcoded-mtext">Near By</span></a>
                     </li>
                     <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-layout"></i></span><span class="pcoded-mtext">Blog</span></a>
                         <ul class="pcoded-submenu">
-                            <li><a href="" target="">Categoris</a></li>
-                            <li><a href="" target="">Add Blog</a></li>
-                            <li><a href="" target="">Blog</a></li>
+                            <li><a href="{{route('blog.categaries.page')}}" target="">Categoris</a></li>
+                            <li><a href="{{route('blog.tag.page')}}" target="">Tag</a></li>
+                            <li><a href="{{route('blog.page')}}" target="">Blog</a></li>
                         </ul>
                     </li>
                     <li class="nav-item pcoded-hasmenu">
