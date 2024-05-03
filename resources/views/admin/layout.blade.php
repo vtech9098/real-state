@@ -126,7 +126,7 @@
                                     class="feather icon-layout"></i></span><span class="pcoded-mtext">Property</span></a>
                         <ul class="pcoded-submenu">
                             <li><a href="" target="">Cagetories</a></li>
-                            <li><a href="" target="">Teams</a></li>
+                            
                         </ul>
                     </li>
                     <li class="nav-item pcoded-hasmenu">
