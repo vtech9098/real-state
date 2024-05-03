@@ -67,8 +67,6 @@
                             <li class="list-group-item"><a href="auth-normal-sign-in.html"><i
                                         class="feather icon-log-out m-r-5"></i>Logout</a></li>
                         </ul>
-
-                        alok
                     </div>
                 </div>
 
