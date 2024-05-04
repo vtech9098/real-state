@@ -77,27 +77,43 @@
                         <a href="" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
                     </li>
+                    <li class="nav-item pcoded-hasmenu">
+                        <a class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-layout"></i></span><span class="pcoded-mtext">Aminities</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="{{route('aminities.page')}}" target=""> Add Aminities</a></li>
+                            <li><a href="{{route('aminities.show.page')}}" target="">Aminities</a></li>
+                        </ul>
+                    </li>
 
 
-                    <li class="nav-item">
-                        <a href="" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-home"></i></span><span class="pcoded-mtext">Omenities</span></a>
+                    <li class="nav-item pcoded-hasmenu">
+                        <a  class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-layout"></i></span><span class="pcoded-mtext">Categories</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="{{route('categaries.page')}}" target=""> Add Categorie</a></li>
+                            <li><a href="{{route('categaries.show.page')}}" target="">Categories</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-home"></i></span><span
-                                class="pcoded-mtext">Categories</span></a>
+                    <li class="nav-item pcoded-hasmenu">
+                        <a  class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-layout"></i></span><span class="pcoded-mtext">Near By</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="{{route('nearby.page')}}" target=""> Add Near By</a></li>
+                            <li><a href="{{route('nearby.show.page')}}" target="">Near By</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-home"></i></span><span class="pcoded-mtext">Near By</span></a>
-                    </li>
+                    
+                    
                     <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-layout"></i></span><span class="pcoded-mtext">Blog</span></a>
                         <ul class="pcoded-submenu">
-                            <li><a href="" target="">Categoris</a></li>
-                            <li><a href="" target="">Add Blog</a></li>
+                            <li><a href="{{route('blog.categaries.page')}}" target="">Categoris</a></li>
+                            <li><a href="{{ route('blog.show.page')}}" target="">Show Categoris</a></li>
+                            <li><a href="{{route('blog.page')}}" target="">Add Blog</a></li>
+                            <li><a href="" target="">Blog</a></li>
+                            <li><a href="{{route('blog.tag.page')}}" target="">Tag</a></li>
                             <li><a href="" target="">Blog</a></li>
                         </ul>
                     </li>
@@ -108,6 +124,7 @@
                             <li><a href="" target="">Categoris</a></li>
                             <li><a href="" target="">Add Blog</a></li>
                             <li><a href="" target="">Blog</a></li>
+                            
                         </ul>
                     </li>
 
