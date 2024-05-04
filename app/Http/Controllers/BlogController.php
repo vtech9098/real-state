@@ -129,5 +129,6 @@ class BlogController extends Controller
     public function blogTags()
     {
         return view('admin.blog.tag');
+        
     }
 }
