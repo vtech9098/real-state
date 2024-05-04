@@ -8,28 +8,28 @@
                         class="fas fa-angle-left"></i> Back</a>
             </div>
         </div>
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="{{route('blog.create.page')}}" method="POST" enctype="multipart/form-data">
             @csrf
-            {{ method_field('PUT') }}
+            {{-- {{ method_field('PUT') }} --}}
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="page_uri">Name<span class="text-red">*</span></label>
-                        <input type="text" name="page_uri" class="form-control" id="page_uri"
+                        <input type="text" name="name" class="form-control" id="page_uri"
                             value="">
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="page_uri">Slug<span class="text-red"></span></label>
-                        <input type="text" name="page_uri" class="form-control" id="page_uri"
+                        <input type="text" name="slug" class="form-control" id="page_uri"
                             value="">
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="breadcrumb_item">Description</label>
-                        <textarea value='' id="breadcrumb_item" name="breadcrumb_item" class="form-control"
+                        <textarea value='' id="breadcrumb_item" name="description" class="form-control"
                             rows="3"></textarea>
                         
                     </div>
