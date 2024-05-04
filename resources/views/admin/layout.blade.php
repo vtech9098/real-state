@@ -30,8 +30,8 @@
 
 
     <style>
-        .mycontent{
-            display:none;
+        .mycontent {
+            display: none;
         }
     </style>
 
@@ -52,8 +52,7 @@
 
                 <div class="">
                     <div class="main-menu-header">
-                        <img class="img-radius" src="{{ asset('assets/images/user/')}}"
-                            alt="User-Profile-Image">
+                        <img class="img-radius" src="{{ asset('assets/images/user/') }}" alt="User-Profile-Image">
                         <div class="user-details">
                             <div id="more-details">Engineers Hub <i class="fa fa-caret-down"></i></div>
                         </div>
@@ -78,27 +77,44 @@
                         <a href="" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
                     </li>
+                    <li class="nav-item pcoded-hasmenu">
+                        <a class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-layout"></i></span><span class="pcoded-mtext">Aminities</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="{{route('aminities.page')}}" target=""> Add Aminities</a></li>
+                            <li><a href="{{route('aminities.show.page')}}" target="">Aminities</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item pcoded-hasmenu">
+                        <a  class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-layout"></i></span><span class="pcoded-mtext">Categories</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="{{route('categaries.page')}}" target=""> Add Categorie</a></li>
+                            <li><a href="{{route('categaries.show.page')}}" target="">Categories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item pcoded-hasmenu">
+                        <a  class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-layout"></i></span><span class="pcoded-mtext">Near By</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="{{route('nearby.page')}}" target=""> Add Near By</a></li>
+                            <li><a href="{{route('nearby.show.page')}}" target="">Near By</a></li>
+                        </ul>
+                    </li>
                     
                     
-                    <li class="nav-item">
-                        <a href="{{route('aminities.page')}}" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-home"></i></span><span class="pcoded-mtext">Omenities</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{route('categaries.page')}}" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-home"></i></span><span class="pcoded-mtext">Categories</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{route('nearby.page')}}" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-home"></i></span><span class="pcoded-mtext">Near By</span></a>
-                    </li>
                     <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-layout"></i></span><span class="pcoded-mtext">Blog</span></a>
                         <ul class="pcoded-submenu">
                             <li><a href="{{route('blog.categaries.page')}}" target="">Categoris</a></li>
+                            <li><a href="{{ route('blog.show.page')}}" target="">Show Categoris</a></li>
+                            <li><a href="{{route('blog.page')}}" target="">Add Blog</a></li>
+                            <li><a href="" target="">Blog</a></li>
                             <li><a href="{{route('blog.tag.page')}}" target="">Tag</a></li>
-                            <li><a href="{{route('blog.page')}}" target="">Blog</a></li>
+                            <li><a href="" target="">Blog</a></li>
                         </ul>
                     </li>
                     <li class="nav-item pcoded-hasmenu">
@@ -108,9 +124,10 @@
                             <li><a href="" target="">Categoris</a></li>
                             <li><a href="" target="">Add Blog</a></li>
                             <li><a href="" target="">Blog</a></li>
+                            
                         </ul>
                     </li>
-                   
+
                     <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-layout"></i></span><span
@@ -120,14 +137,13 @@
                             <li><a href="" target="">Services</a></li>
                         </ul>
                     </li>
-                   
+
                     <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-layout"></i></span><span class="pcoded-mtext">Property</span></a>
+                                    class="feather icon-layout"></i></span><span
+                                class="pcoded-mtext">Property</span></a>
                         <ul class="pcoded-submenu">
                             <li><a href="" target="">Cagetories</a></li>
-                            
-                        </ul>
                     </li>
                     <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
@@ -138,8 +154,8 @@
                             <li><a href="" target="">Gallary</a></li>
                         </ul>
                     </li>
-                    
-                    
+
+
                     <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-layout"></i></span><span
@@ -149,7 +165,7 @@
 
                         </ul>
                     </li>
-                   
+
                     <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-layout"></i></span><span
@@ -196,7 +212,7 @@
 
 
 
-                   
+
                     <li class="nav-item">
                         <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-file-text"></i></span><span
@@ -425,19 +441,21 @@
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Required Js -->
-    <script src="{{ asset('assets/js/vendor-all.min.js')}}"></script>
-    <script src="{{ asset('assets/js/plugins/bootstrap.min.js')}}"></script>
-    <script src="{{ asset('assets/js/ripple.js')}}"></script>
-    <script src="{{ asset('assets/js/pcoded.min.js')}}"></script>
+    <script src="{{ asset('assets/js/vendor-all.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/ripple.js') }}"></script>
+    <script src="{{ asset('assets/js/pcoded.min.js') }}"></script>
 
     <!-- Apex Chart -->
-    <script src="{{ asset('assets/js/plugins/apexcharts.min.js')}}?v={{ filemtime(public_path('assets/js/plugins/apexcharts.min.js')) }}"></script>
+    <script
+        src="{{ asset('assets/js/plugins/apexcharts.min.js') }}?v={{ filemtime(public_path('assets/js/plugins/apexcharts.min.js')) }}">
+    </script>
 
 
     <!-- custom-chart js -->
-    <script src="{{ asset('assets/js/pages/dashboard-main.js')}}"></script>
+    <script src="{{ asset('assets/js/pages/dashboard-main.js') }}"></script>
     {{-- font awesome iconpicker --}}
-    <script src="{{ asset('assets/js/fontawesome-iconpicker.min.js')}}"></script>
+    <script src="{{ asset('assets/js/fontawesome-iconpicker.min.js') }}"></script>
 
     {{-- ckEditor --}}
     <script>
@@ -464,7 +482,7 @@
             });
         });
     </script>
-   
+
 
 </body>
 
