@@ -4,13 +4,30 @@ use App\Http\Controllers\AminitiesController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategariesController;
 use App\Http\Controllers\LayoutController;
+<<<<<<< HEAD
+use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\SettingController;
+=======
 use App\Http\Controllers\NearbyController;
+>>>>>>> 2b3e05bd31354809d112ccf34e32bd8f55d77edd
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('admin/layout');
 });
 
+<<<<<<< HEAD
+// Property Controller
+Route::get('admin/property/show', [PropertyController::class, 'index'])->name('admin.property.show');
+Route::get('admin/property/create', [PropertyController::class, 'create'])->name('admin.property.create');
+Route::post('admin/property/store', [PropertyController::class, 'store'])->name('admin.property.store');
+Route::get('admin/property/show', [PropertyController::class, 'show'])->name('admin.property.show');
+Route::get('admin/property/edit/{id}', [PropertyController::class, 'edit'])->name('admin.property.edit');
+Route::post('admin/property/update', [PropertyController::class, 'update'])->name('admin.property.update');
+//Setting
+Route::get('admin/setting/edit', [SettingController::class, 'edit'])->name('admin.setting.edit');
+Route::post('admin/setting/update', [SettingController::class, 'update'])->name('admin.setting.update');
+=======
 // Aminities controller
 Route::get('/aminities',[AminitiesController::class, 'index'])->name('aminities.page');
 Route::post('/aminitiescreate',[AminitiesController::class, 'create'])->name('aminities.create.page');
@@ -47,3 +64,4 @@ Route::post('/blogcategariesedit',[BlogController::class, 'update'])->name('blog
 Route::get('/blogcategariesdelete/{id}',[BlogController::class, 'destroy'])->name('blog.delete.page');
 
 Route::get('/blogtag',[BlogController::class, 'blogTags'])->name('blog.tag.page');
+>>>>>>> 2b3e05bd31354809d112ccf34e32bd8f55d77edd

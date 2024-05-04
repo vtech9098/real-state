@@ -139,11 +139,12 @@
                     </li>
 
                     <li class="nav-item pcoded-hasmenu">
-                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-layout"></i></span><span
+                        <a href="{{ route('admin.property.create') }}" class="nav-link "><span
+                                class="pcoded-micon"><i class="feather icon-layout"></i></span><span
                                 class="pcoded-mtext">Property</span></a>
                         <ul class="pcoded-submenu">
                             <li><a href="" target="">Cagetories</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
@@ -167,7 +168,7 @@
                     </li>
 
                     <li class="nav-item pcoded-hasmenu">
-                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
+                        <a href="{{ route('admin.setting.edit') }}" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-layout"></i></span><span
                                 class="pcoded-mtext">Settings</span></span></a>
                         <ul class="pcoded-submenu">
@@ -353,14 +354,8 @@
                 </li>
             </ul>
         </div>
-
-
-
     </header>
     <!-- [ Header ] end -->
-
-
-
     <!-- [ Main Content ] start -->
     <div class="pcoded-main-container">
         <div class="pcoded-content">
