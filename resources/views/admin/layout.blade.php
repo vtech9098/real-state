@@ -112,9 +112,9 @@
                             <li><a href="{{route('blog.categaries.page')}}" target="">Categoris</a></li>
                             <li><a href="{{ route('blog.show.page')}}" target="">Show Categoris</a></li>
                             <li><a href="{{route('blog.page')}}" target="">Add Blog</a></li>
-                            <li><a href="" target="">Blog</a></li>
+                            <li><a href="{{route('blog.select.page')}}" target="">Blog</a></li>
                             <li><a href="{{route('blog.tag.page')}}" target="">Tag</a></li>
-                            <li><a href="" target="">Blog</a></li>
+                            <li><a href="{{ route('tag.show.page')}}" target="">Show Tag</a></li>
                         </ul>
                     </li>
                     <li class="nav-item pcoded-hasmenu">

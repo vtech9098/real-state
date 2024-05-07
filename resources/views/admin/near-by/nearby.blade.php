@@ -8,6 +8,11 @@
                         class="fas fa-angle-left"></i> Back</a>
             </div>
         </div>
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
         <form action="{{route('nearby.create.page')}}" method="POST" enctype="multipart/form-data">
             @csrf
             {{-- {{ method_field('PUT') }} --}}

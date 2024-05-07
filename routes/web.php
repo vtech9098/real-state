@@ -4,19 +4,15 @@ use App\Http\Controllers\AminitiesController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategariesController;
 use App\Http\Controllers\LayoutController;
-<<<<<<< HEAD
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\SettingController;
-=======
 use App\Http\Controllers\NearbyController;
->>>>>>> 2b3e05bd31354809d112ccf34e32bd8f55d77edd
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('admin/layout');
 });
 
-<<<<<<< HEAD
 // Property Controller
 Route::get('admin/property/show', [PropertyController::class, 'index'])->name('admin.property.show');
 Route::get('admin/property/create', [PropertyController::class, 'create'])->name('admin.property.create');
@@ -27,7 +23,6 @@ Route::post('admin/property/update', [PropertyController::class, 'update'])->nam
 //Setting
 Route::get('admin/setting/edit', [SettingController::class, 'edit'])->name('admin.setting.edit');
 Route::post('admin/setting/update', [SettingController::class, 'update'])->name('admin.setting.update');
-=======
 // Aminities controller
 Route::get('/aminities',[AminitiesController::class, 'index'])->name('aminities.page');
 Route::post('/aminitiescreate',[AminitiesController::class, 'create'])->name('aminities.create.page');
@@ -55,7 +50,12 @@ Route::get('/nearbyupdelete/{id}',[NearbyController::class, 'destroy'])->name('n
 // Blog Controller
 Route::get('/blog',[BlogController::class, 'index'])->name('blog.page');
 Route::post('/blogcreate',[BlogController::class, 'blogstore'])->name('blog.insert.page');
+Route::get('/blogshow',[BlogController::class, 'blogShow'])->name('blog.select.page');
+Route::get('/blogedit/{id}',[BlogController::class, 'blogEdit'])->name('blog.editblog.page');
+Route::post('/blogupdate',[BlogController::class, 'blogUpdate'])->name('blog.updateblog.page');
+Route::get('/blogdelete/{id}',[BlogController::class, 'blogDestroy'])->name('blog.deleteblog.page');
 
+// blog Categories
 Route::get('/blogcategaries',[BlogController::class, 'blogCategaries'])->name('blog.categaries.page');
 Route::post('/blogcategariescreate',[BlogController::class, 'store'])->name('blog.create.page');
 Route::get('/blogcategariesshow',[BlogController::class, 'show'])->name('blog.show.page');
@@ -63,5 +63,11 @@ Route::get('/blogcategariesedit/{id}',[BlogController::class, 'edit'])->name('bl
 Route::post('/blogcategariesedit',[BlogController::class, 'update'])->name('blog.update.page');
 Route::get('/blogcategariesdelete/{id}',[BlogController::class, 'destroy'])->name('blog.delete.page');
 
+// blog tag 
 Route::get('/blogtag',[BlogController::class, 'blogTags'])->name('blog.tag.page');
->>>>>>> 2b3e05bd31354809d112ccf34e32bd8f55d77edd
+Route::post('/tagstore',[BlogController::class, 'tagStore'])->name('tag.store.page');
+Route::get('/tagshow',[BlogController::class, 'tagShow'])->name('tag.show.page');
+Route::get('/tagedit/{id}',[BlogController::class, 'tagEdit'])->name('tag.edit.page');
+Route::post('/tagupdate',[BlogController::class, 'tagUpdate'])->name('tag.update.page');
+Route::get('/tagdelete/{id}',[BlogController::class, 'tagDestroy'])->name('tag.delete.page');
+

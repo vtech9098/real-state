@@ -7,29 +7,28 @@
                     <tr>
                         <th>#</th>
                         <th>Name</th>
-                        <th>Icon</th>
-                        <th>Image</th>
+                        <th>Slug</th>
+                        <th>Description</th>
                         <th colspan='2'>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($aminities_show as $show)
+                    @foreach ($tagShow as $show)
                         <tr>
                             <td>{{ $show->id }}</td>
                             <td>{{ $show->name }}</td>
-                            <td><img src="{{ asset('uploads/aminitie/' . $show->icon) }}" alt='Image' width="100px"></td>
-                            <td><img src="{{ asset('uploads/aminitie/' . $show->image) }}" alt='Image' width="100px"></td>
-
+                            <td>{{ $show->slug }}</td>
+                            <td>{{ $show->description }}</td>
                             <td>
                                 <div>
-                                    <a href="{{ route('aminities.edit.page', $show->id) }}" class="mr-2">
+                                    <a href="{{ route('tag.edit.page', $show->id) }}" class="mr-2">
                                         <i class="fa fa-edit text-info font-18"></i>
                                     </a>
                                 </div>
                             </td>
                             <td>
                                 <div>
-                                    <a href="{{ route('aminities.delete.page', $show->id) }}" class="mr-2" onclick="return confirm('Are You sure Want To delete')">
+                                    <a href="{{ route('tag.delete.page', $show->id) }}" class="mr-2" onclick="return confirm('Are You sure Want To delete')">
                                         <i class="fa fa-delete fa-trash text-info font-18"></i>
                                     </a>
                                 </div>
