@@ -5,8 +5,6 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategariesController;
 use App\Http\Controllers\LayoutController;
 use App\Http\Controllers\PropertyController;
-use App\Http\Controllers\SocialController;
-
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\NearbyController;
 use Illuminate\Support\Facades\Route;
@@ -22,11 +20,10 @@ Route::post('admin/property/store', [PropertyController::class, 'store'])->name(
 Route::get('admin/property/show', [PropertyController::class, 'show'])->name('admin.property.show');
 Route::get('admin/property/edit/{id}', [PropertyController::class, 'edit'])->name('admin.property.edit');
 Route::post('admin/property/update', [PropertyController::class, 'update'])->name('admin.property.update');
-Route::get('admin/property/destroy/{id}', [PropertyController::class, 'destroy'])->name('admin.property.destroy');
-
 //Setting
 Route::get('admin/setting/edit', [SettingController::class, 'edit'])->name('admin.setting.edit');
 Route::post('admin/setting/update', [SettingController::class, 'update'])->name('admin.setting.update');
+<<<<<<< HEAD
 <<<<<<< HEAD
 Route::post('admin/setting/header_logo_update', [SettingController::class, 'header_logo_update'])->name('admin.setting.header_logo_update');
 Route::post('admin/setting/footer_logo', [SettingController::class, 'footer_logo'])->name('admin.setting.footer_logo');
@@ -38,29 +35,31 @@ Route::post('admin/setting/seo_update', [SettingController::class, 'seo_update']
 
 =======
 >>>>>>> 067eb13ed4adbb605ebf337ac8d6414b5f05a1fc
+=======
+>>>>>>> 1fdbc871cc4dd97d7741e9b9f26b63fbca5a211e
 // Aminities controller
-Route::get('/aminities', [AminitiesController::class, 'index'])->name('aminities.page');
-Route::post('/aminitiescreate', [AminitiesController::class, 'create'])->name('aminities.create.page');
-Route::get('/aminitiesshow', [AminitiesController::class, 'show'])->name('aminities.show.page');
-Route::get('/aminitiesedit/{id}', [AminitiesController::class, 'edit'])->name('aminities.edit.page');
-Route::post('/aminitiesupdate', [AminitiesController::class, 'update'])->name('aminities.update.page');
-Route::get('/aminitiesdestroy/{id}', [AminitiesController::class, 'destroy'])->name('aminities.delete.page');
+Route::get('/aminities',[AminitiesController::class, 'index'])->name('aminities.page');
+Route::post('/aminitiescreate',[AminitiesController::class, 'create'])->name('aminities.create.page');
+Route::get('/aminitiesshow',[AminitiesController::class, 'show'])->name('aminities.show.page');
+Route::get('/aminitiesedit/{id}',[AminitiesController::class, 'edit'])->name('aminities.edit.page');
+Route::post('/aminitiesupdate',[AminitiesController::class, 'update'])->name('aminities.update.page');
+Route::get('/aminitiesdestroy/{id}',[AminitiesController::class, 'destroy'])->name('aminities.delete.page');
 
 // Categaries controller
-Route::get('/categaries', [CategariesController::class, 'index'])->name('categaries.page');
-Route::post('/categariesstore', [CategariesController::class, 'store'])->name('categaries.create.page');
-Route::get('/categariesshow', [CategariesController::class, 'show'])->name('categaries.show.page');
-Route::get('/categariesedit/{id}', [CategariesController::class, 'edit'])->name('categaries.edit.page');
-Route::post('/categariesupdate', [CategariesController::class, 'update'])->name('categaries.update.page');
-Route::get('/categariesdestroy/{id}', [CategariesController::class, 'destroy'])->name('categaries.destroy.page');
+Route::get('/categaries',[CategariesController::class, 'index'])->name('categaries.page');
+Route::post('/categariesstore',[CategariesController::class, 'store'])->name('categaries.create.page');
+Route::get('/categariesshow',[CategariesController::class, 'show'])->name('categaries.show.page');
+Route::get('/categariesedit/{id}',[CategariesController::class, 'edit'])->name('categaries.edit.page');
+Route::post('/categariesupdate',[CategariesController::class, 'update'])->name('categaries.update.page');
+Route::get('/categariesdestroy/{id}',[CategariesController::class, 'destroy'])->name('categaries.destroy.page');
 
 // Near by controller
-Route::get('/nearby', [NearbyController::class, 'index'])->name('nearby.page');
-Route::post('/nearbystore', [NearbyController::class, 'store'])->name('nearby.create.page');
-Route::get('/nearbyshow', [NearbyController::class, 'show'])->name('nearby.show.page');
-Route::get('/nearbyedit/{id}', [NearbyController::class, 'edit'])->name('nearby.edit.page');
-Route::post('/nearbyupdate', [NearbyController::class, 'update'])->name('nearby.update.page');
-Route::get('/nearbyupdelete/{id}', [NearbyController::class, 'destroy'])->name('nearby.delete.page');
+Route::get('/nearby',[NearbyController::class, 'index'])->name('nearby.page');
+Route::post('/nearbystore',[NearbyController::class, 'store'])->name('nearby.create.page');
+Route::get('/nearbyshow',[NearbyController::class, 'show'])->name('nearby.show.page');
+Route::get('/nearbyedit/{id}',[NearbyController::class, 'edit'])->name('nearby.edit.page');
+Route::post('/nearbyupdate',[NearbyController::class, 'update'])->name('nearby.update.page');
+Route::get('/nearbyupdelete/{id}',[NearbyController::class, 'destroy'])->name('nearby.delete.page');
 
 // Blog Controller
 <<<<<<< HEAD
@@ -107,4 +106,7 @@ Route::get('/tagedit/{id}',[BlogController::class, 'tagEdit'])->name('tag.edit.p
 Route::post('/tagupdate',[BlogController::class, 'tagUpdate'])->name('tag.update.page');
 Route::get('/tagdelete/{id}',[BlogController::class, 'tagDestroy'])->name('tag.delete.page');
 
+<<<<<<< HEAD
 >>>>>>> 067eb13ed4adbb605ebf337ac8d6414b5f05a1fc
+=======
+>>>>>>> 1fdbc871cc4dd97d7741e9b9f26b63fbca5a211e
