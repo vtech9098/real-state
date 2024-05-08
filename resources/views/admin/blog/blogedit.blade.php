@@ -103,7 +103,7 @@
                     <div class="form-group">
                         <label for="custom_breadcrumb_image">Image(size 200 x 200) (.svg, .jpg, .jpeg,
                             .png, .webp, .gif)</label>
-                        <input type="file" name="image" class="form-control-file" id="custom_breadcrumb_image">
+                        <input type="file" name="image" class="form-control-file" id="custom_breadcrumb_image" value="{{ $blogEdit->image}}">
                         <small id="custom_breadcrumb_image" class="form-text text-muted">You do not have to use the
                             recommended sizes. However, please use the recommended sizes for your site design to look its
                             best.</small>
@@ -114,7 +114,7 @@
                     <div class="form-group">
                         <label for="custom_breadcrumb_image">Seo Image(size 200 x 200) (.svg, .jpg, .jpeg,
                             .png, .webp, .gif)</label>
-                        <input type="file" name="seo_image" class="form-control-file" id="custom_breadcrumb_image">
+                        <input type="file" name="seo_image" class="form-control-file" id="custom_breadcrumb_image" value="{{ $blogEdit->seo_image}}">
                         <small id="custom_breadcrumb_image" class="form-text text-muted">You do not have to use the
                             recommended sizes. However, please use the recommended sizes for your site design to look its
                             best.</small>
