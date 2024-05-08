@@ -35,6 +35,5 @@ class Propertys extends Model
         'status',
         'category_ids',
         'unique_id',
-        'project_id'
     ];
 }
