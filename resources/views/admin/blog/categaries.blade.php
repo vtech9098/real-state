@@ -8,6 +8,11 @@
                         class="fas fa-angle-left"></i> Back</a>
             </div>
         </div>
+         @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
         <form action="{{route('blog.create.page')}}" method="POST" enctype="multipart/form-data">
             @csrf
             {{-- {{ method_field('PUT') }} --}}

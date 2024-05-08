@@ -35,7 +35,7 @@
                             </td>
                             <td>
                                 <div>
-                                    <a href="{{ route('categaries.destroy.page', $catshow->id) }}" class="mr-2">
+                                    <a href="{{ route('categaries.destroy.page', $catshow->id) }}" class="mr-2" onclick="return confirm('Are You sure Want To delete')">
                                         <i class="fa fa-delete fa-trash text-info font-18"></i>
                                     </a>
                                 </div>

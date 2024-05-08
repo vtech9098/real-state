@@ -109,12 +109,21 @@
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-layout"></i></span><span class="pcoded-mtext">Blog</span></a>
                         <ul class="pcoded-submenu">
+<<<<<<< HEAD
                             <li><a href="{{ route('blog.categaries.page') }}" target="">Categoris</a></li>
                             <li><a href="{{ route('blog.show.page') }}" target="">Show Categoris</a></li>
                             <li><a href="{{ route('blog.page') }}" target="">Add Blog</a></li>
                             <li><a href="" target="">Blog</a></li>
                             <li><a href="{{ route('blog.tag.page') }}" target="">Tag</a></li>
                             <li><a href="" target="">Blog</a></li>
+=======
+                            <li><a href="{{route('blog.categaries.page')}}" target="">Categoris</a></li>
+                            <li><a href="{{ route('blog.show.page')}}" target="">Show Categoris</a></li>
+                            <li><a href="{{route('blog.page')}}" target="">Add Blog</a></li>
+                            <li><a href="{{route('blog.select.page')}}" target="">Blog</a></li>
+                            <li><a href="{{route('blog.tag.page')}}" target="">Tag</a></li>
+                            <li><a href="{{ route('tag.show.page')}}" target="">Show Tag</a></li>
+>>>>>>> 067eb13ed4adbb605ebf337ac8d6414b5f05a1fc
                         </ul>
                     </li>
                     <li class="nav-item pcoded-hasmenu">

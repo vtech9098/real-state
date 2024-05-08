@@ -13,7 +13,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ( $showCat as $catshow)
+                    @foreach ($showCat as $catshow)
                         <tr>
                             <td>{{ $catshow->id }}</td>
                             <td>{{ $catshow->name }}</td>
@@ -28,7 +28,7 @@
                             </td>
                             <td>
                                 <div>
-                                    <a href="{{ route('blog.delete.page', $catshow->id) }}" class="mr-2">
+                                    <a href="{{ route('blog.delete.page', $catshow->id) }}" class="mr-2" onclick="return confirm('Are You sure Want To delete')">
                                         <i class="fa fa-delete fa-trash text-info font-18"></i>
                                     </a>
                                 </div>
