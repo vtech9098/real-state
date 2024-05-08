@@ -78,53 +78,63 @@
                                     class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
                     </li>
                     <li class="nav-item pcoded-hasmenu">
-                        <a class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-layout"></i></span><span class="pcoded-mtext">Aminities</span></a>
+                        <a class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span
+                                class="pcoded-mtext">Aminities</span></a>
                         <ul class="pcoded-submenu">
-                            <li><a href="{{route('aminities.page')}}" target=""> Add Aminities</a></li>
-                            <li><a href="{{route('aminities.show.page')}}" target="">Aminities</a></li>
+                            <li><a href="{{ route('aminities.page') }}" target=""> Add Aminities</a></li>
+                            <li><a href="{{ route('aminities.show.page') }}" target="">Aminities</a></li>
                         </ul>
                     </li>
 
 
                     <li class="nav-item pcoded-hasmenu">
-                        <a  class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-layout"></i></span><span class="pcoded-mtext">Categories</span></a>
+                        <a class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span
+                                class="pcoded-mtext">Categories</span></a>
                         <ul class="pcoded-submenu">
-                            <li><a href="{{route('categaries.page')}}" target=""> Add Categorie</a></li>
-                            <li><a href="{{route('categaries.show.page')}}" target="">Categories</a></li>
+                            <li><a href="{{ route('categaries.page') }}" target=""> Add Categorie</a></li>
+                            <li><a href="{{ route('categaries.show.page') }}" target="">Categories</a></li>
                         </ul>
                     </li>
                     <li class="nav-item pcoded-hasmenu">
-                        <a  class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-layout"></i></span><span class="pcoded-mtext">Near By</span></a>
+                        <a class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span
+                                class="pcoded-mtext">Near By</span></a>
                         <ul class="pcoded-submenu">
-                            <li><a href="{{route('nearby.page')}}" target=""> Add Near By</a></li>
-                            <li><a href="{{route('nearby.show.page')}}" target="">Near By</a></li>
+                            <li><a href="{{ route('nearby.page') }}" target=""> Add Near By</a></li>
+                            <li><a href="{{ route('nearby.show.page') }}" target="">Near By</a></li>
                         </ul>
                     </li>
-                    
-                    
+
+
                     <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-layout"></i></span><span class="pcoded-mtext">Blog</span></a>
                         <ul class="pcoded-submenu">
+<<<<<<< HEAD
+                            <li><a href="{{ route('blog.categaries.page') }}" target="">Categoris</a></li>
+                            <li><a href="{{ route('blog.show.page') }}" target="">Show Categoris</a></li>
+                            <li><a href="{{ route('blog.page') }}" target="">Add Blog</a></li>
+                            <li><a href="" target="">Blog</a></li>
+                            <li><a href="{{ route('blog.tag.page') }}" target="">Tag</a></li>
+                            <li><a href="" target="">Blog</a></li>
+=======
                             <li><a href="{{route('blog.categaries.page')}}" target="">Categoris</a></li>
                             <li><a href="{{ route('blog.show.page')}}" target="">Show Categoris</a></li>
                             <li><a href="{{route('blog.page')}}" target="">Add Blog</a></li>
                             <li><a href="{{route('blog.select.page')}}" target="">Blog</a></li>
                             <li><a href="{{route('blog.tag.page')}}" target="">Tag</a></li>
                             <li><a href="{{ route('tag.show.page')}}" target="">Show Tag</a></li>
+>>>>>>> 067eb13ed4adbb605ebf337ac8d6414b5f05a1fc
                         </ul>
                     </li>
                     <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-layout"></i></span><span class="pcoded-mtext">Listing</span></a>
+                                    class="feather icon-layout"></i></span><span
+                                class="pcoded-mtext">Listing</span></a>
                         <ul class="pcoded-submenu">
                             <li><a href="" target="">Categoris</a></li>
                             <li><a href="" target="">Add Blog</a></li>
                             <li><a href="" target="">Blog</a></li>
-                            
+
                         </ul>
                     </li>
 
@@ -139,12 +149,21 @@
                     </li>
 
                     <li class="nav-item pcoded-hasmenu">
-                        <a href="{{ route('admin.property.create') }}" class="nav-link "><span
-                                class="pcoded-micon"><i class="feather icon-layout"></i></span><span
+                        <a href="{{ route('admin.property.show') }}" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-layout"></i></span><span
                                 class="pcoded-mtext">Property</span></a>
                         <ul class="pcoded-submenu">
                             <li><a href="" target="">Cagetories</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="{{ route('admin.social_link.create') }}" class="nav-link "><span
+                                class="pcoded-micon"><i class="feather icon-layout"></i></span><span
+                                class="pcoded-mtext">Social Link</span></a>
+                        {{-- <ul class="pcoded-submenu">
+                            <li><a href="" target="">Add Gallery</a></li>
+                            <li><a href="" target="">Gallary</a></li>
+                        </ul> --}}
                     </li>
                     <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
@@ -171,7 +190,7 @@
                         <a href="{{ route('admin.setting.edit') }}" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-layout"></i></span><span
                                 class="pcoded-mtext">Settings</span></span></a>
-                        <ul class="pcoded-submenu">
+                        {{-- <ul class="pcoded-submenu">
                             <li><a href="" target="">Prelodeer</a></li>
                             <li><a href="" target="">Favicon</a></li>
                             <li><a href="" target="">Header Info</a></li>
@@ -190,7 +209,7 @@
                             <li><a href="" target="">Quick Acces Futtons</a></li>
                             <li><a href="" target="">Color Option</a></li>
                             <li><a href="" target="">Seo</a></li>
-                        </ul>
+                        </ul> --}}
                     </li>
                     <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
