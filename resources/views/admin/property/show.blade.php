@@ -19,11 +19,11 @@
                                 <th style="width: 10px">#</th>
                                 <th>name</th>
                                 <th>Type</th>
-                                <th>Descripton</th>
                                 <th>Main Image</th>
                                 <th>State</th>
                                 <th>City</th>
                                 <th>Property Location</th>
+                                <th>Facilities</th>
                                 <th>Price</th>
                                 <th>Status</th>
                                 <th>Action</th>
@@ -35,11 +35,11 @@
                                     <td>{{ $property->id }}</td>
                                     <td>{{ $property->name }} </td>
                                     <td>{{ $property->type }}</td>
-                                    <td>{{ $property->description }}</td>
                                     <td>{{ $property->main_image }}</td>
                                     <td>{{ $property->state }}</td>
                                     <td>{{ $property->city }}</td>
                                     <td>{{ $property->property_location }}</td>
+                                    <td>{{ $property->face_name }}</td>
                                     <td>{{ $property->price }}</td>
                                     <td>{{ $property->status }}</td>
                                     <td>

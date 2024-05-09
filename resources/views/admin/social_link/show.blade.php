@@ -4,7 +4,11 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Bordered Table</h3>
+                    <h3 class="card-title">Social Media Table
+                        <a href="{{ route('admin.social_link.create') }}" class="btn btn-primary" style="text-align-right">
+                            Add <i class="fa fa-plus"></i>
+                        </a>
+                    </h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -14,7 +18,6 @@
                                 <th style="width: 10px">#</th>
                                 <th>Icon</th>
                                 <th>Url</th>
-                                <th>Share</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -29,9 +32,6 @@
                                     </td>
                                     <td>
                                         {{ $sociallink->url }}
-                                    </td>
-                                    <td>
-                                        {{ $sociallink->status }}
                                     </td>
                                     <td>
                                         <a href="{{ route('admin.social_link.edit', $sociallink->id) }}"

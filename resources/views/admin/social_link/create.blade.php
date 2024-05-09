@@ -22,16 +22,18 @@
             @csrf
             <div class="form-group">
                 <label for="icon">Icon<span class="text-red">*</span></label>
-                <input type="file" name="icon" class="form-control" id="icon" value="">
+                <input type="file" name="icon" class="form-control" id="icon" value="{{ old('icon') }}">
             </div>
 
             <div class="form-group">
                 <label for="url">Url<span class="text-red">*</span></label>
-                <input type="link" name="url" class="form-control" id="url" placeholder="url">
+                <input type="link" name="url" class="form-control" id="url" placeholder="url"
+                    value="{{ old('link') }}">
             </div>
             <div class="form-group">
                 <label for="share_url">Share_Url<span class="text-red">*</span></label>
-                <input type="link" name="share_url" class="form-control" id="share_url" placeholder="share_url">
+                <input type="link" name="share_url" class="form-control" id="share_url" placeholder="share_url"
+                    value="{{ old('share_url') }}">
             </div>
             <button type="submit" class="btn btn-primary mr-2">Submit</button>
             <button class="btn btn-light">Cancel</button>

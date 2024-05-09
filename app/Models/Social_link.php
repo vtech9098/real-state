@@ -7,12 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Social_link extends Model
 {
+    public $table = 'social_links';
+    public $timestamps = false;
     use HasFactory;
     protected $fillable = [
         'share_url',
         'url',
         'icon',
-        'status',
+        'share_url',
 
     ];
 }

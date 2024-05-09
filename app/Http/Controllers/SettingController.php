@@ -68,7 +68,7 @@ class SettingController extends Controller
         $input = $request->all();
         $file = $request->file('favicon');
         $filename = date('YmdHi') . $file->getClientOriginalName();
-        $file->move(base_path('assets/upload/setting/favicon'), $filename);
+        $file->move(base_path('public/uploads/setting'), $filename);
         $input['favicon'] = $filename;
         unset($input["_token"]);
 

@@ -24,10 +24,12 @@
 
     {{-- font awesome iconpicker --}}
     <link rel="stylesheet" href="{{ asset('assets/css/fontawesome-iconpicker.min.css') }}">
-    <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v6.5.2/css/all.css" rel="stylesheet">
 
     <script src="https://cdn.ckeditor.com/ckeditor5/41.3.1/classic/ckeditor.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fontawesome-iconpicker/3.2.0/js/fontawesome-iconpicker.min.js"
+        integrity="sha512-7dlzSK4Ulfm85ypS8/ya0xLf3NpXiML3s6HTLu4qDq7WiJWtLLyrXb9putdP3/1umwTmzIvhuu9EW7gHYSVtCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <style>
         .mycontent {
@@ -88,7 +90,8 @@
 
 
                     <li class="nav-item pcoded-hasmenu">
-                        <a class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span
+                        <a class="nav-link "><span class="pcoded-micon"><i
+                                    class="fa-solid fa-layer-group"></i></span><span
                                 class="pcoded-mtext">Categories</span></a>
                         <ul class="pcoded-submenu">
                             <li><a href="{{ route('categaries.page') }}" target=""> Add Categorie</a></li>
@@ -96,8 +99,9 @@
                         </ul>
                     </li>
                     <li class="nav-item pcoded-hasmenu">
-                        <a class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span
-                                class="pcoded-mtext">Near By</span></a>
+                        <a class="nav-link "><span class="pcoded-micon"><i
+                                    class="far fa-street-view"></i></i></span><span class="pcoded-mtext">Near
+                                By</span></a>
                         <ul class="pcoded-submenu">
                             <li><a href="{{ route('nearby.page') }}" target=""> Add Near By</a></li>
                             <li><a href="{{ route('nearby.show.page') }}" target="">Near By</a></li>
@@ -107,14 +111,14 @@
 
                     <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-layout"></i></span><span class="pcoded-mtext">Blog</span></a>
+                                    class="fa-solid fa-blog"></i></span><span class="pcoded-mtext">Blog</span></a>
                         <ul class="pcoded-submenu">
-                            <li><a href="{{ route('blog.categaries.page') }}" target="">Categoris</a></li>
+                            {{-- <li><a href="{{ route('blog.categaries.page') }}" target="">Categoris</a></li>
                             <li><a href="{{ route('blog.show.page') }}" target="">Show Categoris</a></li>
                             <li><a href="{{ route('blog.page') }}" target="">Add Blog</a></li>
                             <li><a href="" target="">Blog</a></li>
                             <li><a href="{{ route('blog.tag.page') }}" target="">Tag</a></li>
-                            <li><a href="" target="">Blog</a></li>
+                            <li><a href="" target="">Blog</a></li> --}}
                             <li><a href="{{ route('blog.categaries.page') }}" target="">Categoris</a></li>
                             <li><a href="{{ route('blog.show.page') }}" target="">Show Categoris</a></li>
                             <li><a href="{{ route('blog.page') }}" target="">Add Blog</a></li>
@@ -123,69 +127,40 @@
                             <li><a href="{{ route('tag.show.page') }}" target="">Show Tag</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item pcoded-hasmenu">
-                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-layout"></i></span><span
-                                class="pcoded-mtext">Listing</span></a>
-                        <ul class="pcoded-submenu">
-                            <li><a href="" target="">Categoris</a></li>
-                            <li><a href="" target="">Add Blog</a></li>
-                            <li><a href="" target="">Blog</a></li>
-
-                        </ul>
-                    </li>
 
                     <li class="nav-item pcoded-hasmenu">
-                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-layout"></i></span><span
-                                class="pcoded-mtext">Services</span></a>
+                        <a href="#" class="nav-link "><span class="pcoded-micon"><i
+                                    class="fa-solid fa-list"></i></span><span class="pcoded-mtext">Listing</span></a>
                         <ul class="pcoded-submenu">
-                            <li><a href="" target="">Categories</a></li>
-                            <li><a href="" target="">Services</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item pcoded-hasmenu">
-                        <a href="{{ route('admin.property.show') }}" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-layout"></i></span><span
-                                class="pcoded-mtext">Property</span></a>
-                        <ul class="pcoded-submenu">
-                            <li><a href="" target="">Cagetories</a></li>
+                            <li><a href="{{ route('categaries.show.page') }}" target="">Cagetories</a></li>
+                            <li><a href="{{ route('admin.property.show') }}">Properties</a></li>
                         </ul>
                     </li>
                     <li class="nav-item pcoded-hasmenu">
-                        <a href="{{ route('admin.social_link.create') }}" class="nav-link "><span
+                        <a href="{{ route('admin.social_link.show') }}" class="nav-link "><span
                                 class="pcoded-micon"><i class="feather icon-layout"></i></span><span
                                 class="pcoded-mtext">Social Link</span></a>
                         {{-- <ul class="pcoded-submenu">
-                            <li><a href="" target="">Add Gallery</a></li>
-                            <li><a href="" target="">Gallary</a></li>
+                            <li><a href="{{ route('admin.social_link.show') }}" target="">Add </a></li>
+
                         </ul> --}}
                     </li>
-                    <li class="nav-item pcoded-hasmenu">
-                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-layout"></i></span><span
-                                class="pcoded-mtext">Gallery</span></a>
-                        <ul class="pcoded-submenu">
-                            <li><a href="" target="">Add Gallery</a></li>
-                            <li><a href="" target="">Gallary</a></li>
-                        </ul>
-                    </li>
 
 
-                    <li class="nav-item pcoded-hasmenu">
+
+                    {{-- <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-layout"></i></span><span
+                                    class="fas fa-folder-open menu-icon"></i></span><span
                                 class="pcoded-mtext">Contact</span></a>
                         <ul class="pcoded-submenu">
                             <li><a href="" target="">Messages</a></li>
 
                         </ul>
-                    </li>
+                    </li> --}}
 
                     <li class="nav-item pcoded-hasmenu">
-                        <a href="{{ route('admin.setting.edit') }}" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-layout"></i></span><span
+                        <a href="{{ route('admin.setting.edit') }}" class="nav-link "><span class="pcoded-micon">
+                                <i class="fas fa-fw fa-cog menu-icon"></i></span><span
                                 class="pcoded-mtext">Settings</span></span></a>
                         {{-- <ul class="pcoded-submenu">
                             <li><a href="" target="">Prelodeer</a></li>
@@ -208,7 +183,7 @@
                             <li><a href="" target="">Seo</a></li>
                         </ul> --}}
                     </li>
-                    <li class="nav-item pcoded-hasmenu">
+                    {{-- <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-layout"></i></span><span class="pcoded-mtext">Admin Rale
                                 Manage</span></span></a>
@@ -216,8 +191,8 @@
                             <li><a href="" target="">Add Admin Role</a></li>
                             <li><a href="" target="">Admin Roles</a></li>
                         </ul>
-                    </li>
-                    <li class="nav-item pcoded-hasmenu">
+                    </li> --}}
+                    {{-- <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-layout"></i></span><span class="pcoded-mtext">Admin
                                 Manage</span></span></a>
@@ -238,7 +213,7 @@
                     <li class="nav-item">
                         <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"></i></span><span
                                 class="pcoded-mtext"></span></a>
-                    </li>
+                    </li> --}}
 
                 </ul>
             </div>

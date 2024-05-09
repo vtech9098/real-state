@@ -204,11 +204,15 @@
                                                 <div class="form-group">
                                                     <label for="enable_preloader" class="col-form-label">Preloader
                                                     </label>
-                                                    <select class="form-control" name="enable_preloader"
-                                                        id="enable_preloader">
-                                                        <option value="enable" selected="">Select Your Option</option>
-                                                        <option value="enable">Enable</option>
-                                                        <option value="disable">Disable</option>
+                                                    <select name="enable_preloader" id="status" class="form-control">
+                                                        <option
+                                                            {{ $settings->enable_preloader == 'enable' ? 'selected' : '' }}
+                                                            value="enable">Enable
+                                                        </option>
+                                                        <option
+                                                            {{ $settings->enable_preloader == 'disable' ? 'selected' : '' }}
+                                                            value="disable">Disable
+                                                        </option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -250,44 +254,44 @@
                                                     <span class="text-danger font-weight-bold custom-tag mr-1"
                                                         onclick="insertTag('p', 'copyright')">&lt;p&gt;</span></small>
                                             </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label for="about_us">About Us</label>
-                                                    <textarea name="about_us" class="form-control" id="about_us" rows="3">{{ $settings->about_us }}</textarea>
-                                                </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="about_us">About Us</label>
+                                                <textarea name="about_us" class="form-control" id="about_us" rows="3">{{ $settings->about_us }}</textarea>
                                             </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label for="address">Address</label>
-                                                    <textarea name="address" class="form-control" id="address" rows="3">{{ $settings->address }}</textarea>
-                                                </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="address">Address</label>
+                                                <textarea name="address" class="form-control" id="address" rows="3">{{ $settings->address }}</textarea>
                                             </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label for="phone">Phone</label>
-                                                    <input name="phone" class="form-control"
-                                                        id="phone"value="{{ $settings->phone }}"></input>
-                                                </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="phone">Phone</label>
+                                                <input name="phone" class="form-control"
+                                                    id="phone"value="{{ $settings->phone }}"></input>
                                             </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label for="email">Email</label>
-                                                    <input name="email" class="form-control"
-                                                        id="email"value="{{ $settings->email }}"></input>
-                                                </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="email">Email</label>
+                                                <input name="email" class="form-control"
+                                                    id="email"value="{{ $settings->email }}"></input>
                                             </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label for="site_title">Site Title</label>
-                                                    <input type="text" name="site_title"
-                                                        value="{{ $settings->site_title }}" class="form-control"
-                                                        id="site_title">
-                                                </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="site_title">Site Title</label>
+                                                <input type="text" name="site_title"
+                                                    value="{{ $settings->site_title }}" class="form-control"
+                                                    id="site_title">
                                             </div>
+                                        </div>
 
-                                            <div class="col-md-12">
-                                                <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                                            </div>
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
                                         </div>
                                     </form>
                                 </div>
@@ -317,34 +321,36 @@
                                                     <textarea name="seo_description" class="form-control" id="seo_description" rows="3">{{ $settings->seo_description }}</textarea>
                                                 </div>
                                             </div>
-                                            <div class="form-group">
-                                                <label for="seo_image">Seo Image (size 128 x 128) (.svg, .jpg, .jpeg,
-                                                    .png,
-                                                    .webp)</label>
-                                                <input type="file" name="seo_image" class="form-control-file"
-                                                    id="seo_image" value="{{ $settings->seo_image }}">
-                                                <small class="form-text text-muted">You do not have to use the
-                                                    recommended sizes.
-                                                    However, please use the recommended sizes for your site design to
-                                                    look its
-                                                    best.</small>
-                                                <div class="height-card box-margin">
-                                                    <div class="card">
-                                                        <div class="card-body">
-                                                            <div class="avatar-area text-center">
-                                                                <div class="media">
-                                                                    <a class="d-block mx-auto" href="#"
-                                                                        data-toggle="tooltip" data-placement="top"
-                                                                        data-original-title="Current Image">
-                                                                        <img src="{{ asset('uploads/setting/' . $settings->seo_image) }}"
-                                                                            alt="Seo Images">
-                                                                    </a>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="seo_image">Seo Image (size 128 x 128) (.svg, .jpg, .jpeg,
+                                                        .png,
+                                                        .webp)</label>
+                                                    <input type="file" name="seo_image" class="form-control-file"
+                                                        id="seo_image" value="{{ $settings->seo_image }}">
+                                                    <small class="form-text text-muted">You do not have to use the
+                                                        recommended sizes.
+                                                        However, please use the recommended sizes for your site design to
+                                                        look its
+                                                        best.</small>
+                                                    <div class="height-card box-margin">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <div class="avatar-area text-center">
+                                                                    <div class="media">
+                                                                        <a class="d-block mx-auto" href="#"
+                                                                            data-toggle="tooltip" data-placement="top"
+                                                                            data-original-title="Current Image">
+                                                                            <img src="{{ asset('uploads/setting/' . $settings->seo_image) }}"
+                                                                                alt="Seo Images">
+                                                                        </a>
+                                                                    </div>
                                                                 </div>
+                                                                <!--end card-body-->
                                                             </div>
-                                                            <!--end card-body-->
                                                         </div>
+                                                        <!--end card-->
                                                     </div>
-                                                    <!--end card-->
                                                 </div>
                                             </div>
                                             <div class="col-md-12">

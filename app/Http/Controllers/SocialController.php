@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Social;
 use App\Models\Social_link;
 
 class SocialController extends Controller
@@ -75,21 +74,37 @@ class SocialController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
         //
-        $social_link = Social_link::find($id);
-        $social_link->url = $request->url;
-        if ($request->hasFile('icon')) {
-            $file = $request->file('icon');
-            $extension = $file->getClientOriginalExtension();
-            $filename = time() . '.' . $extension;
-            $file->move('uploads/social_link/', $filename);
-            $social_link->icon = $filename;
+
+
+        $id = $request->input('id');
+        $social_link = Social_link::findOrFail($id);
+        $social_link->url = $request->input('url');
+        $social_link->share_url = $request->input('share_url');
+
+        if ($request->hasfile('icon')) {
+            $fileupdate = $request->file('icon');
+            $extensionupdate = $fileupdate->getClientOriginalExtension();
+            $filenameupdate = time() . '.' . $extensionupdate;
+            $fileupdate->move('uploads/social_link/', $filenameupdate);
+            $social_link->icon = $filenameupdate;
         }
         $social_link->update();
-        return redirect()->route('social_link.index')->with('success', 'Social Link Updated Successfully');
+        return redirect()->route('admin.social_link.show')->with('success', 'Social Link Updated Successfully');
+
+        // $input = $request->all();
+        // $file = $request->file('icon');
+        // $fileName = date('YmdHi') . $file->getClientOriginalName();
+        // $file->move(base_path('public/uploads/social_link'), $fileName);
+        // $input['icon'] = $fileName;
+        // unset($input["_token"]);
+
+        // Social_link::where("id")->update($input);
+        // return redirect()->route('admin.social_link.show')->with('success', 'Social Link Updated Successfully');
     }
+
 
     /**
      * Remove the specified resource from storage.

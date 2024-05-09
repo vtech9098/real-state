@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Amenitie;
 
 use Illuminate\Http\Request;
@@ -22,19 +23,17 @@ class AminitiesController extends Controller
     {
         $aminities = new Amenitie;
         $aminities->name = $request->input('name');
-        if($request->hasfile('icon_image'))
-        {
+        if ($request->hasfile('icon_image')) {
             $file = $request->file('icon_image');
             $extension = $file->getClientOriginalExtension();
-            $filename = time().'.'.$extension;
+            $filename = time() . '.' . $extension;
             $file->move('uploads/aminitie/', $filename);
             $aminities->icon = $filename;
         }
-        if($request->hasfile('image'))
-        {
+        if ($request->hasfile('image')) {
             $files = $request->file('image');
             $extensions = $files->getClientOriginalExtension();
-            $filenames = time().'.'.$extensions;
+            $filenames = time() . '.' . $extensions;
             $files->move('uploads/aminitie/', $filenames);
             $aminities->image = $filenames;
         }
@@ -56,7 +55,7 @@ class AminitiesController extends Controller
     public function show()
     {
         $aminities_show = Amenitie::all();
-        return view('admin.aminities.aminitiesshow',compact('aminities_show'));
+        return view('admin.aminities.aminitiesshow', compact('aminities_show'));
     }
 
     /**
@@ -76,26 +75,22 @@ class AminitiesController extends Controller
         $id = $request->input('id');
         $updateAminities = Amenitie::findOrFail($id);
         $updateAminities->name = $request->input('name');
-        if($request->hasfile('icon_image'))
-        {
+        if ($request->hasfile('icon_image')) {
             $fileupdate = $request->file('icon_image');
             $extensionupdate = $fileupdate->getClientOriginalExtension();
-            $filenameupdate = time().'.'.$extensionupdate;
+            $filenameupdate = time() . '.' . $extensionupdate;
             $fileupdate->move('uploads/aminitie/', $filenameupdate);
             $updateAminities->icon = $filenameupdate;
         }
-        if($request->hasfile('image'))
-        {
+        if ($request->hasfile('image')) {
             $files2 = $request->file('image');
             $extensions2 = $files2->getClientOriginalExtension();
-            $filenames2 = time().'.'.$extensions2;
+            $filenames2 = time() . '.' . $extensions2;
             $files2->move('uploads/aminitie/', $filenames2);
             $updateAminities->image = $filenames2;
         }
         $updateAminities->save();
-        return redirect()->route('aminities.show.page')->with('success','Aminities Updated Successfully');
- 
-           
+        return redirect()->route('aminities.show.page')->with('success', 'Aminities Updated Successfully');
     }
 
     /**
@@ -104,6 +99,6 @@ class AminitiesController extends Controller
     public function destroy(string $id)
     {
         Amenitie::find($id)->delete();
-        return redirect()->route('aminities.show.page')->with('success','Aminities Deleted Successfully');
+        return redirect()->route('aminities.show.page')->with('success', 'Aminities Deleted Successfully');
     }
 }

@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Propertys;
 use App\Models\Amenitie;
+use App\Models\Category;
 use App\Models\Near_by;
+use Illuminate\Support\Facades\DB;
 
 class PropertyController extends Controller
 {
@@ -27,7 +29,8 @@ class PropertyController extends Controller
         //  
         $ami = Amenitie::all();
         $near = Near_by::all();
-        return view('admin.property.create', compact('ami', 'near'));
+        $category = Category::all();
+        return view('admin.property.create', compact('ami', 'near', 'category'));
     }
 
     /**
@@ -76,7 +79,7 @@ class PropertyController extends Controller
         $property->no_of_floors = $request->input('no_of_floors');
         $property->square_meter = $request->input('square_meter');
         $property->price = $request->input('price');
-        $property->facilities = $request->input('facilities');
+        $property->facilities = implode(",", $request->input('facilities'));
         $property->features = $request->input('features');
         $property->seo_title = $request->input('seo_title');
         $property->seo_description = $request->input('seo_description');
@@ -116,9 +119,7 @@ class PropertyController extends Controller
     public function show()
     {
         //
-
-        $properties = Propertys::all();
-
+        $properties = Propertys::select("*", DB::raw('(SELECT GROUP_CONCAT(name) FROM `amenities` where FIND_IN_SET (id,propertys.facilities))as face_name '))->get();
         return view("admin.property.show", compact('properties'));
     }
 
@@ -131,8 +132,8 @@ class PropertyController extends Controller
         $ami = Amenitie::all();
         $near = Near_by::all();
         $properties = Propertys::find($id);
-
-        return view("admin.property.edit", compact('properties', 'ami', 'near'));
+        $category = Category::all();
+        return view("admin.property.edit", compact('properties', 'ami', 'near', 'category'));
     }
 
     /**
@@ -150,9 +151,7 @@ class PropertyController extends Controller
         $property->country = $request->input('country');
         $property->state = $request->input('state');
         $property->city = $request->input('city');
-
         $property->property_location = $request->input('property_location');
-
         $property->latitude = $request->input('latitude');
         $property->longitude = $request->input('longitude');
         $property->no_of_bedrooms = $request->input('no_of_bedrooms');
@@ -160,7 +159,7 @@ class PropertyController extends Controller
         $property->no_of_floors = $request->input('no_of_floors');
         $property->square_meter = $request->input('square_meter');
         $property->price = $request->input('price');
-        $property->facilities = $request->input('facilities');
+        $property->facilities = implode(",", $request->input('facilities'));
         $property->features = $request->input('features');
         $property->seo_title = $request->input('seo_title');
         $property->seo_description = $request->input('seo_description');

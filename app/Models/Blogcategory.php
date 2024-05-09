@@ -7,14 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Blogcategory extends Model
 {
-    use HasFactory;
-    public $table = 'blog-category';
-    public $timestamps = false;
-     protected $fillable = [
-        'name',
-        'slug',
-        'description',
-         
-     ];
-}
+   use HasFactory;
+   public $table = 'blog_category';
+   public $timestamps = false;
+   protected $fillable = [
+      'name',
+      'slug',
+      'description',
 
+   ];
+}
