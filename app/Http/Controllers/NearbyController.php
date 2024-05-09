@@ -34,18 +34,19 @@ class NearbyController extends Controller
         {
             $file = $request->file('icon');
             $extension = $file->getClientOriginalExtension();
-            $filename = time().'.'.$extension;
+            $filename = time().'_icon.'.$extension;
             $file->move('uploads/aminitie/', $filename);
             $near_by->icon = $filename;
         }
         if($request->hasfile('image'))
         {
-            $files = $request->file('image');
-            $extensions = $files->getClientOriginalExtension();
-            $filenames = time().'.'.$extensions;
-            $files->move('uploads/aminitie/', $filenames);
-            $near_by->image = $filenames;
+            $file2 = $request->file('image');
+            $extensions = $file2->getClientOriginalExtension();
+            $filename2 = time().'_image.'.$extensions;
+            $file2->move('uploads/aminitie/', $filename2);
+            $near_by->image = $filename2;
         }
+        // print_r($near_by);exit;
         $near_by->save();
         return redirect()->back()->with('status', 'Aminities Added Successfully');
 
@@ -81,7 +82,7 @@ class NearbyController extends Controller
         {
             $fileupdate = $request->file('icon');
             $extensionupdate = $fileupdate->getClientOriginalExtension();
-            $filenameupdate = time().'.'.$extensionupdate;
+            $filenameupdate = time().'_icon.'.$extensionupdate;
             $fileupdate->move('uploads/aminitie/', $filenameupdate);
             $updateNearby->icon = $filenameupdate;
         }
@@ -89,11 +90,11 @@ class NearbyController extends Controller
         {
             $files2 = $request->file('image');
             $extensions2 = $files2->getClientOriginalExtension();
-            $filenames2 = time().'.'.$extensions2;
+            $filenames2 = time().'_image.'.$extensions2;
             $files2->move('uploads/aminitie/', $filenames2);
             $updateNearby->image = $filenames2;
         }
-        $updateNearby->save();
+        $updateNearby->update();
         return redirect()->route('nearby.show.page')->with('success','Near By Updated Successfully');
     }
 

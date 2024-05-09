@@ -42,7 +42,7 @@ class CategariesController extends Controller
         {
             $file = $request->file('icon');
             $extension = $file->getClientOriginalExtension();
-            $filename = time().'.'.$extension;
+            $filename = time().'_icon.'.$extension;
             $file->move('uploads/aminitie/', $filename);
             $aminities->icon = $filename;
         }
@@ -50,7 +50,7 @@ class CategariesController extends Controller
         {
             $files = $request->file('image');
             $extensions = $files->getClientOriginalExtension();
-            $filenames = time().'.'.$extensions;
+            $filenames = time().'_image.'.$extensions;
             $files->move('uploads/aminitie/', $filenames);
             $aminities->image = $filenames;
         }
@@ -91,7 +91,7 @@ class CategariesController extends Controller
         {
             $fileupdate = $request->file('icon');
             $extensionupdate = $fileupdate->getClientOriginalExtension();
-            $filenameupdate = time().'.'.$extensionupdate;
+            $filenameupdate = time().'_icon.'.$extensionupdate;
             $fileupdate->move('uploads/aminitie/', $filenameupdate);
             $updateCat->icon = $filenameupdate;
         }
@@ -99,7 +99,7 @@ class CategariesController extends Controller
         {
             $files2 = $request->file('image');
             $extensions2 = $files2->getClientOriginalExtension();
-            $filenames2 = time().'.'.$extensions2;
+            $filenames2 = time().'_image.'.$extensions2;
             $files2->move('uploads/aminitie/', $filenames2);
             $updateCat->image = $filenames2;
         }

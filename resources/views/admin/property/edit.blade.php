@@ -67,11 +67,20 @@
                             value="{{ $properties->other_images }}">
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="country">Country<span class="text-red"></span></label>
                         <input type="text" name="country" id="country" value="{{ $properties->country }}"
                             class="form-control">
+=======
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="country">Country<span class="text-red"></span></label>
+                    <select class="form-control" name="country" id="country">
+                        <option value="{{ $properties->id }}">{{ $properties->country }}</option>
+>>>>>>> 2e623520926cc55919d7daf75b05d5aba7277c1c
 
 
                     </div>

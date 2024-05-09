@@ -78,7 +78,7 @@ class BlogController extends Controller
         $catupdate->name = $request->input('name');
         $catupdate->slug = $request->input('slug');
         $catupdate->description = $request->input('description');
-        $catupdate->save();
+        $catupdate->update();
         return redirect()->route('blog.show.page')->with('success','Blog Categories Updated Successfully');
     }
 
@@ -105,13 +105,13 @@ class BlogController extends Controller
         $blogstore->seo_title = $request->input('seo_title');
         $blogstore->seo_description = $request->input('seo_description');
         $blogstore->seo_keyword = $request->input('seo_keyword');
-        $blogstore->image = $request->input('image');
-        $blogstore->seo_image = $request->input('seo_image');
+        // $blogstore->image = $request->input('image');
+        // $blogstore->seo_image = $request->input('seo_image');
         if($request->hasfile('image'))
         {
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
-            $filename = time().'.'.$extension;
+            $filename = time().'_icon.'.$extension;
             $file->move('uploads/aminitie/', $filename);
             $blogstore->image = $filename;
         }
@@ -119,7 +119,7 @@ class BlogController extends Controller
         {
             $files = $request->file('seo_image');
             $extensions = $files->getClientOriginalExtension();
-            $filenames = time().'.'.$extensions;
+            $filenames = time().'_image.'.$extensions;
             $files->move('uploads/aminitie/', $filenames);
             $blogstore->seo_image = $filenames;
         }
@@ -155,13 +155,13 @@ class BlogController extends Controller
         $blogupdate->seo_title = $request->input('seo_title');
         $blogupdate->seo_description = $request->input('seo_description');
         $blogupdate->seo_keyword = $request->input('seo_keyword');
-        $blogupdate->image = $request->input('image');
-        $blogupdate->seo_image = $request->input('seo_image');
+        // $blogupdate->image = $request->input('image');
+        // $blogupdate->seo_image = $request->input('seo_image');
         if($request->hasfile('image'))
         {
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
-            $filename = time().'.'.$extension;
+            $filename = time().'_icon.'.$extension;
             $file->move('uploads/aminitie/', $filename);
             $blogupdate->image = $filename;
         }
@@ -169,11 +169,11 @@ class BlogController extends Controller
         {
             $files = $request->file('seo_image');
             $extensions = $files->getClientOriginalExtension();
-            $filenames = time().'.'.$extensions;
+            $filenames = time().'_image.'.$extensions;
             $files->move('uploads/aminitie/', $filenames);
             $blogupdate->seo_image = $filenames;
         }
-        $blogupdate->save();
+        $blogupdate->update();
         return redirect()->route('blog.select.page')->with('success','blog Updated Successfully');
     }
     // blog delete controller
@@ -225,7 +225,7 @@ class BlogController extends Controller
         $tagupdate->name = $request->input('name');
         $tagupdate->slug = $request->input('slug');
         $tagupdate->description = $request->input('description');
-        $tagupdate->save();
+        $tagupdate->update();
         return redirect()->route('tag.show.page')->with('success','Tag Updated Successfully');
     }
     // blog tag delete
