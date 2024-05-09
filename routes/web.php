@@ -3,6 +3,7 @@
 use App\Http\Controllers\AminitiesController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategariesController;
+use App\Http\Controllers\SocialController;
 use App\Http\Controllers\LayoutController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\SettingController;
@@ -10,7 +11,7 @@ use App\Http\Controllers\NearbyController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('admin/layout');
+    return view('front_end/layout');
 });
 
 // Property Controller
@@ -20,11 +21,12 @@ Route::post('admin/property/store', [PropertyController::class, 'store'])->name(
 Route::get('admin/property/show', [PropertyController::class, 'show'])->name('admin.property.show');
 Route::get('admin/property/edit/{id}', [PropertyController::class, 'edit'])->name('admin.property.edit');
 Route::post('admin/property/update', [PropertyController::class, 'update'])->name('admin.property.update');
+Route::get('admin/property/destroy/{id}', [PropertyController::class, 'destroy'])->name('admin.property.destroy');
+
 //Setting
 Route::get('admin/setting/edit', [SettingController::class, 'edit'])->name('admin.setting.edit');
 Route::post('admin/setting/update', [SettingController::class, 'update'])->name('admin.setting.update');
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 Route::post('admin/setting/header_logo_update', [SettingController::class, 'header_logo_update'])->name('admin.setting.header_logo_update');
 Route::post('admin/setting/footer_logo', [SettingController::class, 'footer_logo'])->name('admin.setting.footer_logo');
 Route::post('admin/setting/favicon_update', [SettingController::class, 'favicon_update'])->name('admin.setting.favicon_update');
@@ -33,10 +35,6 @@ Route::post('admin/setting/setting_update', [SettingController::class, 'setting_
 Route::post('admin/setting/preloader_update', [SettingController::class, 'preloader_update'])->name('admin.setting.preloader_update');
 Route::post('admin/setting/seo_update', [SettingController::class, 'seo_update'])->name('admin.setting.seo_update');
 
-=======
->>>>>>> 067eb13ed4adbb605ebf337ac8d6414b5f05a1fc
-=======
->>>>>>> 1fdbc871cc4dd97d7741e9b9f26b63fbca5a211e
 // Aminities controller
 Route::get('/aminities',[AminitiesController::class, 'index'])->name('aminities.page');
 Route::post('/aminitiescreate',[AminitiesController::class, 'create'])->name('aminities.create.page');
@@ -61,18 +59,18 @@ Route::get('/nearbyedit/{id}',[NearbyController::class, 'edit'])->name('nearby.e
 Route::post('/nearbyupdate',[NearbyController::class, 'update'])->name('nearby.update.page');
 Route::get('/nearbyupdelete/{id}',[NearbyController::class, 'destroy'])->name('nearby.delete.page');
 
-// Blog Controller
-<<<<<<< HEAD
-Route::get('/blog', [BlogController::class, 'index'])->name('blog.page');
-Route::post('/blogcreate', [BlogController::class, 'blogstore'])->name('blog.insert.page');
+// // Blog Controller
 
-Route::get('/blogcategaries', [BlogController::class, 'blogCategaries'])->name('blog.categaries.page');
-Route::post('/blogcategariescreate', [BlogController::class, 'store'])->name('blog.create.page');
-Route::get('/blogcategariesshow', [BlogController::class, 'show'])->name('blog.show.page');
-Route::get('/blogcategariesedit/{id}', [BlogController::class, 'edit'])->name('blog.edit.page');
-Route::post('/blogcategariesedit', [BlogController::class, 'update'])->name('blog.update.page');
-Route::get('/blogcategariesdelete/{id}', [BlogController::class, 'destroy'])->name('blog.delete.page');
-Route::get('/blogtag', [BlogController::class, 'blogTags'])->name('blog.tag.page');
+// Route::get('/blog', [BlogController::class, 'index'])->name('blog.page');
+// Route::post('/blogcreate', [BlogController::class, 'blogstore'])->name('blog.insert.page');
+
+// Route::get('/blogcategaries', [BlogController::class, 'blogCategaries'])->name('blog.categaries.page');
+// Route::post('/blogcategariescreate', [BlogController::class, 'store'])->name('blog.create.page');
+// Route::get('/blogcategariesshow', [BlogController::class, 'show'])->name('blog.show.page');
+// Route::get('/blogcategariesedit/{id}', [BlogController::class, 'edit'])->name('blog.edit.page');
+// Route::post('/blogcategariesedit', [BlogController::class, 'update'])->name('blog.update.page');
+// Route::get('/blogcategariesdelete/{id}', [BlogController::class, 'destroy'])->name('blog.delete.page');
+// Route::get('/blogtag', [BlogController::class, 'blogTags'])->name('blog.tag.page');
 //Social
 Route::get('admin/social_link/create', [SocialController::class, 'index'])->name('admin.social_link.create');
 Route::post('admin/social_link/store', [SocialController::class, 'store'])->name('admin.social_link.store');
@@ -80,9 +78,8 @@ Route::get('admin/social_link/create', [SocialController::class, 'create'])->nam
 Route::get('admin/social_link/show', [SocialController::class, 'show'])->name('admin.social_link.show');
 Route::get('admin/social_link/edit/{id}', [SocialController::class, 'edit'])->name('admin.social_link.edit');
 Route::post('admin/social_link/update', [SocialController::class, 'update'])->name('admin.social_link.update');
-
 Route::get('admin/social_link/destory/{id}', [SocialController::class, 'destroy'])->name('admin.social_link.destory');
-=======
+//Blog
 Route::get('/blog',[BlogController::class, 'index'])->name('blog.page');
 Route::post('/blogcreate',[BlogController::class, 'blogstore'])->name('blog.insert.page');
 Route::get('/blogshow',[BlogController::class, 'blogShow'])->name('blog.select.page');
@@ -106,7 +103,3 @@ Route::get('/tagedit/{id}',[BlogController::class, 'tagEdit'])->name('tag.edit.p
 Route::post('/tagupdate',[BlogController::class, 'tagUpdate'])->name('tag.update.page');
 Route::get('/tagdelete/{id}',[BlogController::class, 'tagDestroy'])->name('tag.delete.page');
 
-<<<<<<< HEAD
->>>>>>> 067eb13ed4adbb605ebf337ac8d6414b5f05a1fc
-=======
->>>>>>> 1fdbc871cc4dd97d7741e9b9f26b63fbca5a211e

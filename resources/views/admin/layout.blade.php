@@ -109,12 +109,12 @@
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-layout"></i></span><span class="pcoded-mtext">Blog</span></a>
                         <ul class="pcoded-submenu">
-                            <li><a href="{{ route('blog.categaries.page') }}" target="">Categoris</a></li>
+                            {{-- <li><a href="{{ route('blog.categaries.page') }}" target="">Categoris</a></li>
                             <li><a href="{{ route('blog.show.page') }}" target="">Show Categoris</a></li>
                             <li><a href="{{ route('blog.page') }}" target="">Add Blog</a></li>
                             <li><a href="" target="">Blog</a></li>
                             <li><a href="{{ route('blog.tag.page') }}" target="">Tag</a></li>
-                            <li><a href="" target="">Blog</a></li>
+                            <li><a href="" target="">Blog</a></li> --}}
                             <li><a href="{{ route('blog.categaries.page') }}" target="">Categoris</a></li>
                             <li><a href="{{ route('blog.show.page') }}" target="">Show Categoris</a></li>
                             <li><a href="{{ route('blog.page') }}" target="">Add Blog</a></li>
@@ -123,7 +123,7 @@
                             <li><a href="{{ route('tag.show.page') }}" target="">Show Tag</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item pcoded-hasmenu">
+                    {{-- <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-layout"></i></span><span
                                 class="pcoded-mtext">Listing</span></a>
@@ -133,9 +133,9 @@
                             <li><a href="" target="">Blog</a></li>
 
                         </ul>
-                    </li>
+                    </li> --}}
 
-                    <li class="nav-item pcoded-hasmenu">
+                    {{-- <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-layout"></i></span><span
                                 class="pcoded-mtext">Services</span></a>
@@ -143,15 +143,15 @@
                             <li><a href="" target="">Categories</a></li>
                             <li><a href="" target="">Services</a></li>
                         </ul>
-                    </li>
+                    </li> --}}
 
                     <li class="nav-item pcoded-hasmenu">
                         <a href="{{ route('admin.property.show') }}" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-layout"></i></span><span
                                 class="pcoded-mtext">Property</span></a>
-                        <ul class="pcoded-submenu">
+                        {{-- <ul class="pcoded-submenu">
                             <li><a href="" target="">Cagetories</a></li>
-                        </ul>
+                        </ul> --}}
                     </li>
                     <li class="nav-item pcoded-hasmenu">
                         <a href="{{ route('admin.social_link.create') }}" class="nav-link "><span
@@ -162,7 +162,7 @@
                             <li><a href="" target="">Gallary</a></li>
                         </ul> --}}
                     </li>
-                    <li class="nav-item pcoded-hasmenu">
+                    {{-- <li class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-layout"></i></span><span
                                 class="pcoded-mtext">Gallery</span></a>
@@ -170,7 +170,7 @@
                             <li><a href="" target="">Add Gallery</a></li>
                             <li><a href="" target="">Gallary</a></li>
                         </ul>
-                    </li>
+                    </li> --}}
 
 
                     <li class="nav-item pcoded-hasmenu">

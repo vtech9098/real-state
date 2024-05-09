@@ -19,7 +19,6 @@
                             <td>{{ $near->name }}</td>
                             <td><img src="{{ asset('uploads/aminitie/' . $near->icon) }}" alt='Image' width="100px"></td>
                             <td><img src="{{ asset('uploads/aminitie/' . $near->image) }}" alt='Image' width="100px"></td>
-
                             <td>
                                 <div>
                                     <a href="{{ route('nearby.edit.page', $near->id) }}" class="mr-2">

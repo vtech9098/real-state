@@ -26,7 +26,7 @@ class AminitiesController extends Controller
         {
             $file = $request->file('icon_image');
             $extension = $file->getClientOriginalExtension();
-            $filename = time().'.'.$extension;
+            $filename = time().'_icon.'.$extension;
             $file->move('uploads/aminitie/', $filename);
             $aminities->icon = $filename;
         }
@@ -34,7 +34,7 @@ class AminitiesController extends Controller
         {
             $files = $request->file('image');
             $extensions = $files->getClientOriginalExtension();
-            $filenames = time().'.'.$extensions;
+            $filenames = time().'_image.'.$extensions;
             $files->move('uploads/aminitie/', $filenames);
             $aminities->image = $filenames;
         }
@@ -80,7 +80,7 @@ class AminitiesController extends Controller
         {
             $fileupdate = $request->file('icon_image');
             $extensionupdate = $fileupdate->getClientOriginalExtension();
-            $filenameupdate = time().'.'.$extensionupdate;
+            $filenameupdate = time().'_icon.'.$extensionupdate;
             $fileupdate->move('uploads/aminitie/', $filenameupdate);
             $updateAminities->icon = $filenameupdate;
         }
@@ -88,7 +88,7 @@ class AminitiesController extends Controller
         {
             $files2 = $request->file('image');
             $extensions2 = $files2->getClientOriginalExtension();
-            $filenames2 = time().'.'.$extensions2;
+            $filenames2 = time().'_image.'.$extensions2;
             $files2->move('uploads/aminitie/', $filenames2);
             $updateAminities->image = $filenames2;
         }

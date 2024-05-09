@@ -7,14 +7,8 @@
                     <tr>
                         <th>#</th>
                         <th>Title</th>
-                        <th>Slug</th>
-                        <th>Short Description</th>
-                        <th> Long Description</th>
                         <th>Categaries</th>
                         <th>Tags</th>
-                        <th>Seo Title</th>
-                        <th>Seo Description</th>
-                        <th>Seo Keyword</th>
                         <th>Image</th>
                         <th>Seo Image</th>
                         <th colspan='2'>Action</th>
@@ -25,14 +19,8 @@
                         <tr>
                             <td>{{ $blogshow->id }}</td>
                             <td>{{ $blogshow->title }}</td>
-                            <td>{{ $blogshow->slug }}</td>
-                            <td>{{ $blogshow->short_description }}</td>
-                            <td>{{ $blogshow->long_description }}</td>
                             <td>{{ $blogshow->category_name}}</td>
                             <td>{{ $blogshow->tag_name}}</td>
-                            <td>{{ $blogshow->seo_title}}</td>
-                            <td>{{ $blogshow->seo_description}}</td>
-                            <td>{{ $blogshow->seo_keyword}}</td>
                             <td><img src="{{ asset('uploads/aminitie/'.$blogshow->image)}}" alt="" style='width:100px;'></td>
                             <td><img src="{{ asset('uploads/aminitie/'.$blogshow->seo_image)}}" alt="" style='width:100px;'></td>
                            

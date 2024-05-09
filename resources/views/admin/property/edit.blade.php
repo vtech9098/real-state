@@ -69,7 +69,7 @@
                 <div class="form-group">
                     <label for="country">Country<span class="text-red"></span></label>
                     <select class="form-control" name="country" id="country">
-                        <option value="{{ $properties->country }}"></option>
+                        <option value="{{ $properties->id }}">{{ $properties->country }}</option>
 
                     </select>
                 </div>
