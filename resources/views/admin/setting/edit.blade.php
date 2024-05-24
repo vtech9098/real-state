@@ -62,7 +62,6 @@
                                                                         <img src="{{ asset('uploads/setting/' . $settings->header_logo) }}"
                                                                             alt="Header Logo">
                                                                     </a>
-
                                                                 </div>
                                                             </div>
                                                             <!--end card-body-->
@@ -113,7 +112,7 @@
                                                                         data-toggle="tooltip" data-placement="top"
                                                                         data-original-title="Current Image">
                                                                         <img src="{{ asset('uploads/setting/' . $settings->footer_logo) }}"
-                                                                            alt="Footer Logo">
+                                                                            alt="Footer Logo" style="width:100%">
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -167,7 +166,7 @@
                                                                         data-toggle="tooltip" data-placement="top"
                                                                         data-original-title="Current Image">
                                                                         <img src="{{ asset('uploads/setting/' . $settings->favicon) }}"
-                                                                            alt="Favicon">
+                                                                            alt="Favicon" style="width:100%; ">
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -271,14 +270,14 @@
                                             <div class="form-group">
                                                 <label for="phone">Phone</label>
                                                 <input name="phone" class="form-control"
-                                                    id="phone"value="{{ $settings->phone }}"></input>
+                                                    id="phone"value="{{ $settings->phone }}">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="email">Email</label>
                                                 <input name="email" class="form-control"
-                                                    id="email"value="{{ $settings->email }}"></input>
+                                                    id="email"value="{{ $settings->email }}">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
@@ -342,7 +341,7 @@
                                                                             data-toggle="tooltip" data-placement="top"
                                                                             data-original-title="Current Image">
                                                                             <img src="{{ asset('uploads/setting/' . $settings->seo_image) }}"
-                                                                                alt="Seo Images">
+                                                                                alt="Seo Images" style="width:100%">
                                                                         </a>
                                                                     </div>
                                                                 </div>

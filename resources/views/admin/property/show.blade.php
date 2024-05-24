@@ -4,12 +4,12 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Property Table</h3>
-                    <div>
-                        <a href="{{ route('admin.property.create') }}" class="btn btn-primary has-ripple"> Add +<span
+                    <h3 class="card-title">Property Table
+                    
+                        <a href="{{ route('admin.property.create') }}" class="btn btn-primary has-ripple  float-right"> Add +<span
                                 class="ripple ripple-animate"
                                 style="height: 81.1125px; width: 81.1125px; animation-duration: 0.7s; animation-timing-function: linear; background: rgb(255, 255, 255); opacity: 0.4; top: -24.8563px; left: -5.24375px;"></span></a>
-                    </div>
+                    </h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -19,9 +19,6 @@
                                 <th style="width: 10px">#</th>
                                 <th>name</th>
                                 <th>Type</th>
-                                <th>Main Image</th>
-                                <th>State</th>
-                                <th>City</th>
                                 <th>Property Location</th>
                                 <th>Facilities</th>
                                 <th>Price</th>
@@ -35,9 +32,6 @@
                                     <td>{{ $property->id }}</td>
                                     <td>{{ $property->name }} </td>
                                     <td>{{ $property->type }}</td>
-                                    <td>{{ $property->main_image }}</td>
-                                    <td>{{ $property->state }}</td>
-                                    <td>{{ $property->city }}</td>
                                     <td>{{ $property->property_location }}</td>
                                     <td>{{ $property->face_name }}</td>
                                     <td>{{ $property->price }}</td>

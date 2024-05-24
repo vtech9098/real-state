@@ -26,22 +26,14 @@ class AminitiesController extends Controller
         if ($request->hasfile('icon_image')) {
             $file = $request->file('icon_image');
             $extension = $file->getClientOriginalExtension();
-<<<<<<< HEAD
-            $filename = time() . '.' . $extension;
-=======
             $filename = time().'_icon.'.$extension;
->>>>>>> 2e623520926cc55919d7daf75b05d5aba7277c1c
             $file->move('uploads/aminitie/', $filename);
             $aminities->icon = $filename;
         }
         if ($request->hasfile('image')) {
             $files = $request->file('image');
             $extensions = $files->getClientOriginalExtension();
-<<<<<<< HEAD
-            $filenames = time() . '.' . $extensions;
-=======
             $filenames = time().'_image.'.$extensions;
->>>>>>> 2e623520926cc55919d7daf75b05d5aba7277c1c
             $files->move('uploads/aminitie/', $filenames);
             $aminities->image = $filenames;
         }
@@ -86,26 +78,18 @@ class AminitiesController extends Controller
         if ($request->hasfile('icon_image')) {
             $fileupdate = $request->file('icon_image');
             $extensionupdate = $fileupdate->getClientOriginalExtension();
-<<<<<<< HEAD
-            $filenameupdate = time() . '.' . $extensionupdate;
-=======
             $filenameupdate = time().'_icon.'.$extensionupdate;
->>>>>>> 2e623520926cc55919d7daf75b05d5aba7277c1c
             $fileupdate->move('uploads/aminitie/', $filenameupdate);
             $updateAminities->icon = $filenameupdate;
         }
         if ($request->hasfile('image')) {
             $files2 = $request->file('image');
             $extensions2 = $files2->getClientOriginalExtension();
-<<<<<<< HEAD
-            $filenames2 = time() . '.' . $extensions2;
-=======
             $filenames2 = time().'_image.'.$extensions2;
->>>>>>> 2e623520926cc55919d7daf75b05d5aba7277c1c
             $files2->move('uploads/aminitie/', $filenames2);
             $updateAminities->image = $filenames2;
         }
-        $updateAminities->save();
+        $updateAminities->update();
         return redirect()->route('aminities.show.page')->with('success', 'Aminities Updated Successfully');
     }
 

@@ -48,7 +48,7 @@
                 </div>
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label for="" class="col-form-label">Categaries</label>
+                        <label for="" class="col-form-label">Categories</label>
                         @php
                             $blog_cate = explode(',', $blogEdit->category);
                         @endphp

@@ -107,10 +107,12 @@ class SettingController extends Controller
             'seo_keywords' => 'required',
         ]);
         $input = $request->all();
-        $file = $request->file('seo_image');
-        $fileName = date('YmdHi') . $file->getClientOriginalName();
-        $file->move(base_path('public/uploads/setting'), $fileName);
-        $input['seo_image'] = $fileName;
+        if ($request->hasFile('seo_image')) {
+            $file = $request->file('seo_image');
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(base_path('public/uploads/setting'), $filename);
+            $input['seo_image'] = $filename;
+        }
         unset($input["_token"]);
 
         Setting::where("id", 1)->update($input);

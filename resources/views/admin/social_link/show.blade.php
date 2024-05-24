@@ -5,8 +5,8 @@
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Social Media Table
-                        <a href="{{ route('admin.social_link.create') }}" class="btn btn-primary" style="text-align-right">
-                            Add <i class="fa fa-plus"></i>
+                        <a href="{{ route('admin.social_link.create') }}" class="btn btn-primary float-right" style="text-align-right">
+                            Add <i class="fa fa-plus" ></i>
                         </a>
                     </h3>
                 </div>
@@ -38,7 +38,7 @@
                                             class="btn btn-primary">
                                             <i class="fa fa-edit"></i></a>
                                         <a href="{{ route('admin.social_link.destory', $sociallink->id) }}"
-                                            class="btn btn-danger">
+                                            class="btn btn-danger" onclick="return confirm('Are you sure want to Delete')">
                                             <i class="fa fa-trash"></i></a>
                                     </td>
                                 </tr>

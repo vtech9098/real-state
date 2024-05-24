@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AminitiesController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategariesController;
@@ -8,13 +9,23 @@ use App\Http\Controllers\LayoutController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\NearbyController;
-use App\Http\Controllers\SocialController;
-
+use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('front_end/layout');
 });
+
+// Admin Login
+Route::get('admin/loginform',[AdminController::class, 'AdminForm'])->name('admin.form');
+Route::post('admin/login',[AdminController::class, 'AdminLogin'])->name('admin.login')->middleware("guest");
+Route::get('admin/logout',[AdminController::class, 'AdminLogout'])->name('admin.logout');
+
+// dashboard route
+Route::get('admin/dashboard',[AdminController::class, 'Dashboard'])->name('admin.dashboard')->middleware("auth:web");
+Route::get('admin/dashboard2',[AdminController::class, 'Dashboard2'])->name('admin.dashboard2')->middleware("auth:web");
+
+
 
 // Property Controller
 Route::get('admin/property/show', [PropertyController::class, 'index'])->name('admin.property.show');
@@ -37,10 +48,7 @@ Route::post('admin/setting/setting_update', [SettingController::class, 'setting_
 Route::post('admin/setting/preloader_update', [SettingController::class, 'preloader_update'])->name('admin.setting.preloader_update');
 Route::post('admin/setting/seo_update', [SettingController::class, 'seo_update'])->name('admin.setting.seo_update');
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 2e623520926cc55919d7daf75b05d5aba7277c1c
 // Aminities controller
 Route::get('/aminities', [AminitiesController::class, 'index'])->name('aminities.page');
 Route::post('/aminitiescreate', [AminitiesController::class, 'create'])->name('aminities.create.page');
@@ -65,25 +73,6 @@ Route::get('/nearbyedit/{id}', [NearbyController::class, 'edit'])->name('nearby.
 Route::post('/nearbyupdate', [NearbyController::class, 'update'])->name('nearby.update.page');
 Route::get('/nearbyupdelete/{id}', [NearbyController::class, 'destroy'])->name('nearby.delete.page');
 
-<<<<<<< HEAD
-// Blog Controller
-
-Route::get('/blog', [BlogController::class, 'index'])->name('blog.page');
-Route::post('/blogcreate', [BlogController::class, 'blogstore'])->name('blog.insert.page');
-=======
-// // Blog Controller
->>>>>>> 2e623520926cc55919d7daf75b05d5aba7277c1c
-
-// Route::get('/blog', [BlogController::class, 'index'])->name('blog.page');
-// Route::post('/blogcreate', [BlogController::class, 'blogstore'])->name('blog.insert.page');
-
-// Route::get('/blogcategaries', [BlogController::class, 'blogCategaries'])->name('blog.categaries.page');
-// Route::post('/blogcategariescreate', [BlogController::class, 'store'])->name('blog.create.page');
-// Route::get('/blogcategariesshow', [BlogController::class, 'show'])->name('blog.show.page');
-// Route::get('/blogcategariesedit/{id}', [BlogController::class, 'edit'])->name('blog.edit.page');
-// Route::post('/blogcategariesedit', [BlogController::class, 'update'])->name('blog.update.page');
-// Route::get('/blogcategariesdelete/{id}', [BlogController::class, 'destroy'])->name('blog.delete.page');
-// Route::get('/blogtag', [BlogController::class, 'blogTags'])->name('blog.tag.page');
 //Social
 Route::get('admin/social_link/create', [SocialController::class, 'index'])->name('admin.social_link.create');
 Route::post('admin/social_link/store', [SocialController::class, 'store'])->name('admin.social_link.store');
@@ -92,7 +81,6 @@ Route::get('admin/social_link/show', [SocialController::class, 'show'])->name('a
 Route::get('admin/social_link/edit/{id}', [SocialController::class, 'edit'])->name('admin.social_link.edit');
 Route::post('admin/social_link/update', [SocialController::class, 'update'])->name('admin.social_link.update');
 Route::get('admin/social_link/destory/{id}', [SocialController::class, 'destroy'])->name('admin.social_link.destory');
-<<<<<<< HEAD
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.page');
 Route::post('/blogcreate', [BlogController::class, 'blogstore'])->name('blog.insert.page');
@@ -100,15 +88,6 @@ Route::get('/blogshow', [BlogController::class, 'blogShow'])->name('blog.select.
 Route::get('/blogedit/{id}', [BlogController::class, 'blogEdit'])->name('blog.editblog.page');
 Route::post('/blogupdate', [BlogController::class, 'blogUpdate'])->name('blog.updateblog.page');
 Route::get('/blogdelete/{id}', [BlogController::class, 'blogDestroy'])->name('blog.deleteblog.page');
-=======
-//Blog
-Route::get('/blog',[BlogController::class, 'index'])->name('blog.page');
-Route::post('/blogcreate',[BlogController::class, 'blogstore'])->name('blog.insert.page');
-Route::get('/blogshow',[BlogController::class, 'blogShow'])->name('blog.select.page');
-Route::get('/blogedit/{id}',[BlogController::class, 'blogEdit'])->name('blog.editblog.page');
-Route::post('/blogupdate',[BlogController::class, 'blogUpdate'])->name('blog.updateblog.page');
-Route::get('/blogdelete/{id}',[BlogController::class, 'blogDestroy'])->name('blog.deleteblog.page');
->>>>>>> 2e623520926cc55919d7daf75b05d5aba7277c1c
 
 // blog Categories
 Route::get('/blogcategaries', [BlogController::class, 'blogCategaries'])->name('blog.categaries.page');
@@ -119,19 +98,17 @@ Route::post('/blogcategariesedit', [BlogController::class, 'update'])->name('blo
 Route::get('/blogcategariesdelete/{id}', [BlogController::class, 'destroy'])->name('blog.delete.page');
 
 // blog tag 
-<<<<<<< HEAD
 Route::get('/blogtag', [BlogController::class, 'blogTags'])->name('blog.tag.page');
 Route::post('/tagstore', [BlogController::class, 'tagStore'])->name('tag.store.page');
 Route::get('/tagshow', [BlogController::class, 'tagShow'])->name('tag.show.page');
 Route::get('/tagedit/{id}', [BlogController::class, 'tagEdit'])->name('tag.edit.page');
 Route::post('/tagupdate', [BlogController::class, 'tagUpdate'])->name('tag.update.page');
 Route::get('/tagdelete/{id}', [BlogController::class, 'tagDestroy'])->name('tag.delete.page');
-=======
-Route::get('/blogtag',[BlogController::class, 'blogTags'])->name('blog.tag.page');
-Route::post('/tagstore',[BlogController::class, 'tagStore'])->name('tag.store.page');
-Route::get('/tagshow',[BlogController::class, 'tagShow'])->name('tag.show.page');
-Route::get('/tagedit/{id}',[BlogController::class, 'tagEdit'])->name('tag.edit.page');
-Route::post('/tagupdate',[BlogController::class, 'tagUpdate'])->name('tag.update.page');
-Route::get('/tagdelete/{id}',[BlogController::class, 'tagDestroy'])->name('tag.delete.page');
 
->>>>>>> 2e623520926cc55919d7daf75b05d5aba7277c1c
+// slider 
+Route::get('/slider',[SliderController::class, 'create'])->name('slider.page');
+Route::post('/sliderstore',[SliderController::class, 'store'])->name('slider.store.page');
+Route::get('/slidershow',[SliderController::class, 'show'])->name('slider.show.page');
+Route::get('/slideredit/{id}',[SliderController::class, 'edit'])->name('slider.edit.page');
+Route::post('/sliderupdate',[SliderController::class, 'update'])->name('slider.update.page');
+Route::get('/sliderdelete/{id}',[SliderController::class, 'destroy'])->name('slider.delete.page');

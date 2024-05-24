@@ -3,13 +3,6 @@
     <div class="card card-body">
         <div class="d-md-flex justify-content-between align-items-center mb-20">
             <h4 class="card-title">Near By</h4>
-<<<<<<< HEAD
-=======
-            {{-- <div>
-                <a href="https://engineershub.org.in/admin/page-builder/create" class="btn btn-primary"><i
-                        class="fas fa-angle-left"></i> Back</a>
-            </div> --}}
->>>>>>> 2e623520926cc55919d7daf75b05d5aba7277c1c
         </div>
         <form action="{{ route('nearby.update.page') }}" method="POST" enctype="multipart/form-data">
             @csrf

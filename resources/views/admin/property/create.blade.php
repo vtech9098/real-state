@@ -56,8 +56,8 @@
                     <div class="form-group">
                         <label for="is_featured">Is Featured<span class="text-red"></span></label>
                         <select class="form-control" name="is_featured" id="is_featured">
-                            <option value="0">Enable</option>
-                            <option value="1">Disabled</option>
+                            <option value="enable">Enable</option>
+                            <option value="disable">Disabled</option>
                         </select>
                     </div>
                 </div>

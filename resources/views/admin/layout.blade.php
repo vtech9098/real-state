@@ -81,10 +81,10 @@
                     </li>
                     <li class="nav-item pcoded-hasmenu">
                         <a class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span
-                                class="pcoded-mtext">Aminities</span></a>
+                                class="pcoded-mtext">Amenities</span></a>
                         <ul class="pcoded-submenu">
-                            <li><a href="{{ route('aminities.page') }}" target=""> Add Aminities</a></li>
-                            <li><a href="{{ route('aminities.show.page') }}" target="">Aminities</a></li>
+                            <li><a href="{{ route('aminities.page') }}" target=""> Add Amenities</a></li>
+                            <li><a href="{{ route('aminities.show.page') }}" target="">Amenities</a></li>
                         </ul>
                     </li>
 
@@ -127,7 +127,6 @@
                             <li><a href="{{ route('tag.show.page') }}" target="">Show Tag</a></li>
                         </ul>
                     </li>
-<<<<<<< HEAD
 
                     <li class="nav-item pcoded-hasmenu">
                         <a href="#" class="nav-link "><span class="pcoded-micon"><i
@@ -136,37 +135,16 @@
                             <li><a href="{{ route('categaries.show.page') }}" target="">Cagetories</a></li>
                             <li><a href="{{ route('admin.property.show') }}">Properties</a></li>
                         </ul>
-=======
-                    {{-- <li class="nav-item pcoded-hasmenu">
-                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-layout"></i></span><span
-                                class="pcoded-mtext">Listing</span></a>
-                        <ul class="pcoded-submenu">
-                            <li><a href="" target="">Categoris</a></li>
-                            <li><a href="" target="">Add Blog</a></li>
-                            <li><a href="" target="">Blog</a></li>
-
-                        </ul>
-                    </li> --}}
-
-                    {{-- <li class="nav-item pcoded-hasmenu">
-                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-layout"></i></span><span
-                                class="pcoded-mtext">Services</span></a>
-                        <ul class="pcoded-submenu">
-                            <li><a href="" target="">Categories</a></li>
-                            <li><a href="" target="">Services</a></li>
-                        </ul>
-                    </li> --}}
-
+                    </li>
+                    {{-- slider --}}
                     <li class="nav-item pcoded-hasmenu">
-                        <a href="{{ route('admin.property.show') }}" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-layout"></i></span><span
-                                class="pcoded-mtext">Property</span></a>
-                        {{-- <ul class="pcoded-submenu">
-                            <li><a href="" target="">Cagetories</a></li>
-                        </ul> --}}
->>>>>>> 2e623520926cc55919d7daf75b05d5aba7277c1c
+                        <a class="nav-link "><span class="pcoded-micon"><i
+                                    class="fa-solid fa-sliders"></i></span><span
+                                class="pcoded-mtext">Slider</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="{{ route('slider.page') }}" target="">Add Slider</a></li>
+                            <li><a href="{{ route('slider.show.page') }}">Show Slider</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item pcoded-hasmenu">
                         <a href="{{ route('admin.social_link.show') }}" class="nav-link "><span
@@ -177,18 +155,6 @@
 
                         </ul> --}}
                     </li>
-<<<<<<< HEAD
-=======
-                    {{-- <li class="nav-item pcoded-hasmenu">
-                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-layout"></i></span><span
-                                class="pcoded-mtext">Gallery</span></a>
-                        <ul class="pcoded-submenu">
-                            <li><a href="" target="">Add Gallery</a></li>
-                            <li><a href="" target="">Gallary</a></li>
-                        </ul>
-                    </li> --}}
->>>>>>> 2e623520926cc55919d7daf75b05d5aba7277c1c
 
 
 
@@ -383,6 +349,8 @@
                                             class="feather icon-mail"></i> My Messages</a></li>
                                 <li><a href="auth-signin.html" class="dropdown-item"><i
                                             class="feather icon-lock"></i> Lock Screen</a></li>
+                                <li><a href="{{ route('admin.logout') }}" class="dropdown-item"><i
+                                            class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
                             </ul>
                         </div>
                     </div>
@@ -400,13 +368,8 @@
                     <div class="row align-items-center">
                         <div class="col-md-12">
                             <div class="page-header-title">
-                                <h5 class="m-b-10">Dashboard Analytics</h5>
+                                <h5 class="m-b-10">Dashboard</h5>
                             </div>
-                            <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html"><i
-                                            class="feather icon-home"></i></a></li>
-                                <li class="breadcrumb-item"><a href="#!">Dashboard Analytics</a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>

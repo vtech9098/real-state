@@ -2,7 +2,7 @@
 @section('mainContent')
    <div class="card card-body">
         <div class="d-md-flex justify-content-between align-items-center mb-20">
-            <h4 class="card-title">Categaries Page</h4>
+            <h4 class="card-title">Categories Page</h4>
             {{-- <div>
                 <a href="https://engineershub.org.in/admin/page-builder/create" class="btn btn-primary"><i
                         class="fas fa-angle-left"></i> Back</a>

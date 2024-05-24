@@ -8,13 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Propertys extends Model
 {
     use HasFactory;
-<<<<<<< HEAD
     protected $table = 'propertys';
     public $timestamps = false;
 
-=======
-    public $timestamps = false;
->>>>>>> 2e623520926cc55919d7daf75b05d5aba7277c1c
     protected $fillable = [
         'name',
         'slug',

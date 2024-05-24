@@ -2,7 +2,7 @@
 @section('mainContent')
     <div class="card card-body">
         <div class="d-md-flex justify-content-between align-items-center mb-20">
-            <h4 class="card-title">Aminities Page</h4>
+            <h4 class="card-title">Amenities Page</h4>
             <div>
                 <a href="" class="btn btn-primary"><i class="fas fa-angle-left"></i> Back</a>
             </div>
@@ -33,12 +33,7 @@
                     <div class="form-group">
                         <label for="custom_breadcrumb_image">Icon (size 200 x 200) (.svg, .jpg, .jpeg,
                             .png, .webp, .gif)</label>
-<<<<<<< HEAD
                         <input type="file" name="icon_image" class="form-control-file" id="custom_breadcrumb_image">
-=======
-                        <input type="file" name="icon_image" class="form-control-file"
-                            id="custom_breadcrumb_image" Required>
->>>>>>> 2e623520926cc55919d7daf75b05d5aba7277c1c
                         <small id="custom_breadcrumb_image" class="form-text text-muted">You do not have to use the
                             recommended sizes. However, please use the recommended sizes for your site design to look its
                             best.</small>
@@ -50,12 +45,8 @@
                     <div class="form-group">
                         <label for="custom_breadcrumb_image">Image (size 1920 x 400) (.svg, .jpg, .jpeg,
                             .png, .webp, .gif)</label>
-<<<<<<< HEAD
-                        <input type="file" name="image" class="form-control-file" id="custom_breadcrumb_image">
-=======
                         <input type="file" name="image" class="form-control-file"
                             id="custom_breadcrumb_image" Required>
->>>>>>> 2e623520926cc55919d7daf75b05d5aba7277c1c
                         <small id="custom_breadcrumb_image" class="form-text text-muted">You do not have to use the
                             recommended sizes. However, please use the recommended sizes for your site design to look its
                             best.</small>

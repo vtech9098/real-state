@@ -48,8 +48,8 @@
                     <div class="form-group">
                         <label for="is_featured">Is Featured<span class="text-red"></span></label>
                         <select class="form-control" name="is_featured" id="is_featured">
-                            <option value="{{ $properties->is_featured }}">0</option>
-                            <option value="1">1</option>
+                            <option {{ $properties->is_featured == 'enable' ? 'selected' : '' }} value="enable">Enable</option>
+                            <option {{ $properties->is_featured == 'disable' ? 'selected' : '' }} value="disable">Disable</option>
                         </select>
                     </div>
                 </div>
@@ -67,21 +67,11 @@
                             value="{{ $properties->other_images }}">
                     </div>
                 </div>
-<<<<<<< HEAD
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="country">Country<span class="text-red"></span></label>
                         <input type="text" name="country" id="country" value="{{ $properties->country }}"
                             class="form-control">
-=======
-            </div>
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label for="country">Country<span class="text-red"></span></label>
-                    <select class="form-control" name="country" id="country">
-                        <option value="{{ $properties->id }}">{{ $properties->country }}</option>
->>>>>>> 2e623520926cc55919d7daf75b05d5aba7277c1c
-
 
                     </div>
                 </div>

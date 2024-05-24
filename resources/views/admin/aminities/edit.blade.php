@@ -2,11 +2,11 @@
 @section('mainContent')
    <div class="card card-body">
         <div class="d-md-flex justify-content-between align-items-center mb-20">
-            <h4 class="card-title">Aminities Page</h4>
-            <div>
+            <h4 class="card-title">Amenities Page</h4>
+            {{-- <div>
                 <a href="https://engineershub.org.in/admin/page-builder/create" class="btn btn-primary"><i
                         class="fas fa-angle-left"></i> Back</a>
-            </div>
+            </div> --}}
         </div>
         <form action="{{ route('aminities.update.page')}}" method="POST" enctype="multipart/form-data">
             @csrf
